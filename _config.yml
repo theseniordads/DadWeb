@@ -1,0 +1,80 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Senior Dads WWWHQ!!
+description: >- # this means to ignore newlines until "baseurl:"
+  We are the flipping megamighty best demo crew in the entire world, and you are jolly well going to visit our brilliant demo pages! You have no choice, because wherever you go on the web for demo crews, all links lead back here!! So why not go here first? You WILL, if you know what's good for you....
+author: Old Fart!!!
+baseurl: "/dadweb" # the subpath of your site, e.g. /blog
+url: "https://alephnaughtpix.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: alephnaught
+github_username:  alephnaughtpix
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-haml
+  
+paginate: 10
+
+permalink: /:year/:month/:day/:title:output_ext
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - src/
+   - build.ps1
+   - runserver_dev.ps1
+   - category_generator.py
+   - tag_generator.py
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: ""          # Set layout for all posts
+      type: "pages"
+      site_page: false
+    values:
+      layout: "page"
+      site_page: false
+  - scope:
+      path: ""          # Set layout for all posts
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "pages"          # Set layout for all page
+    values:
+      layout: "page"
+      site_page: true
+  - scope:
+      path: "_posts/original"          # Set layout for all posts
+      type: "posts"
+    values:
+      old_post: true
+
