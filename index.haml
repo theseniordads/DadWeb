@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
+- require "#{File.dirname(__FILE__)}/code/SiteTasks"
 !!!
 %html<>
   %head<>
@@ -8,7 +9,9 @@ layout: home
     %meta{ :name => "Author", :content => "d0Dd3R1nG g1T"}<>
     %meta{ :name => "Description", :content => "We are the flipping megamighty best demo crew in the entire world, and you are jolly well going to visit our brilliant demo pages! You have no choice, because wherever you go on the web for demo crews, all links lead back here!! So why not go here first? You WILL, if you know what's good for you...."}<>
     %meta{ :name => "KeyWords", :content => "Senior, Dads, demo, crew, computer, multimedia, Atari, Falcon, brilliant, amazing, best, winner, competition"}<>
+    =render_partial :header_files
   %body<>
+    =render_partial :no_javascript
     %div{ :align => "center" }<>
       %p<>
         %img(src="images/sad2a.gif" title="senior dads world HQ" alt="senior dads world HQ" hspace="12" height="275" width="546")<>
@@ -88,5 +91,4 @@ layout: home
       SENIOR DADS rul3c!
     %h3<>
       %em<>
-        IF IT'S TOO OLD, YOU'RE TOO LOUD!!!!!!!
-        
+        IF IT'S TOO OLD, YOU'RE TOO LOUD!!!!!!!        
