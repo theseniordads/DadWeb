@@ -1,0 +1,22 @@
+#demoStats<>
+  .container<>
+    .stats<>
+      .header<> #{demoInfo.name}
+      .platform<> #{demoInfo.platform}
+      .released<> Released: #{demoInfo.releaseDate}!!!!
+      .downloads<>
+        .mainfile<>
+          %a{ :href => demoInfo.mainFile.url }<>
+            %img{ :title=> demoInfo.mainFile.name, :alt=> demoInfo.mainFile.name, :src=> "../images/disk1.gif", :class => "disk", :height => "37", :width => "34" }<>
+          %a{ :href => demoInfo.mainFile.url }<>
+            Shift Clicky 2 Downloady! (#{demoInfo.size}K)
+        - unless demoInfo.mirrorFiles.nil?
+          .mirrors<>
+            Also mirrored at
+            %ul<>
+              - (0..demoInfo.mirrorFiles.size-1).each do |i|
+                %li<>
+                  %a{ :href => demoInfo.mirrorFiles[i].url }<>
+                    %img{ :src => "../images/disk#{i+2}.gif", :class => "disk", :title => "#{demoInfo.mirrorFiles[i].name}", :alt => "#{demoInfo.mirrorFiles[i].name}", :height => "37", :width => "34"}<>
+    .image{ :align => "center", :valign => "top"}<>
+      %img{ :src => demoInfo.gallery[0].url, :title => demoInfo.gallery[0].name, :alt => demoInfo.gallery[0].name }<>

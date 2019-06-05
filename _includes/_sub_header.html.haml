@@ -1,0 +1,7 @@
+#subHeaderWrapper<>
+  #subHeader
+    #sd{    :class => "link", :title => "s33N10r",    :rel => rootUrl }<>
+    - unless (sectionUrl == ".")
+      #title{ :class => "link", :title => sectionTitle, :rel => sectionUrl }<>
+    - else
+      #title{ :title => sectionTitle }<>

@@ -4,16 +4,8 @@
   {%- include head.html -%}
 
   <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content container-fluid" aria-label="Content">
-      <div class="wrapper">
+  	{%- include no_javascript.html -%}
         {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
     {%- include bootstrap.html -%}
 
   </body>
