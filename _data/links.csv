@@ -1,0 +1,72 @@
+id,name,title,url,description,category_id,public,created_at,updated_at
+1,hotwired_rgb,Hotwired RGB Gallery,http://www.hotwired.com/rgb/,"We must be really visonary, because this is a section devoted to people who do the sort of stuff we do in our <a href=""../../demos/default.html"">demos</a>!!",2,t,2019-06-18 11:02:21.729703,2019-06-18 11:02:21.729703
+2,kitchenette,Kitchenette Magazine!,http://www.kitchenette.com/,Our mouths were watering after visiting this site!,2,t,2019-06-18 11:02:21.739827,2019-06-18 11:02:21.739827
+3,whisky_tasting,Whisky tasting notes,http://www.dcs.ed.ac.uk/home/jhb/whisky/padlip.html,I never knew whisky tasting was so interesting! Though I don't spit it out after tasting!!!!!,2,t,2019-06-18 11:02:21.749861,2019-06-18 11:02:21.749861
+4,irnbru_sausage,Internet Irn Bru and Sliced Sausage machine!,http://www.icbl.hw.ac.uk/~william/irnintro.html,"If you thought Coke machines on the WebNet were originall then check this out! This machine actually dispenses Irn Bru and suasages. Shame we can't get to eat them! (The sausages, we mean!!! It would silly to try and eat Irn Bru cans, wouldn't it!!!!)",2,t,2019-06-18 11:02:21.758824,2019-06-18 11:02:21.758824
+5,irnbru,Official Irn Bru Web Site,http://www.irn-bru.co.uk/,"Talking of the famous Scottish soft-drink, check out their visionary web opus! We almost felt like giving up when we saw how brilliant it was!",2,t,2019-06-18 11:02:21.769194,2019-06-18 11:02:21.769194
+6,cheesemaking,Cheesemaking in Scotland,http://www.efr.hw.ac.uk/SDA/book1.html,"Well, as they say, ""blessed are the cheesemakers"", and this is a really interesting site!",2,t,2019-06-18 11:02:21.782195,2019-06-18 11:02:21.782195
+7,biff,B1FF#S K3WL H0M3 PAG3!!!,http://www.panix.com/~clays/biff/,"This guy was a major influence on us! Look here and see why- he knows how to web-design! Also, check out his <a href=""http://shell.rmi.net/~tph/biffsig.html"">signature/a> for tips on how to end your messages on Presetel!!",2,t,2019-06-18 11:02:21.792229,2019-06-18 11:02:21.792229
+8,tain,Tain Through Time,http://www.cali.co.uk/HIGHEXP/TTT/,"CLASS. This is an online museum about a Scottish town called Tain! It's really educational and after reading this site, you want to go there and experience it's history!",2,t,2019-06-18 11:02:21.802227,2019-06-18 11:02:21.802227
+9,team_gates,Team Gates,http://www.teamgates.com/,"Read more about the amazing Mr William Gates III, and his fans. If you want to know how &quot;way too cool&quot; the future of programming is going to be read here!",2,t,2019-06-18 11:02:21.812228,2019-06-18 11:02:21.812228
+10,bigger_net,Bigger Net,http://www.biggar-net.co.uk/index.htm,"If you thought all this talk about &quot;global village&quot; was a load of rubbish, check this out! This is a shining example of a small village in Scotland wired up to the global intranet superinfo highway pipe and beating the big boys at their own game!",2,t,2019-06-18 11:02:21.822230,2019-06-18 11:02:21.822230
+11,cruel_site,Cruel Site of the Day,http://www.cruel.com/,"A really thought-provoking site, detailing communication problems in a corrupt Western society. If you're an intellictual, check this one out!",2,t,2019-06-18 11:02:21.832593,2019-06-18 11:02:21.832593
+12,grampian_transport,Grampian Transport Museum,http://www.cw.globalweb.co.uk/alford/gtm.htm,"Wow! Who knew transport in the north of Scotland could be so interesting!!!! Also, check out the radical design of this site, which uses color opposites to make the text easier on the eyes!",2,t,2019-06-18 11:02:21.842627,2019-06-18 11:02:21.842627
+13,tocs,T.O.C.S,http://dspace.dial.pipex.com/town/plaza/lh48/,No wonder this company is &quot;well established&quot;! Wait till you see the quality of their site!!!,2,t,2019-06-18 11:02:21.852616,2019-06-18 11:02:21.852616
+14,calico_links,Links page on Calico,http://www.cali.co.uk/links/,Some wisdom from the professionals. These guys design web pages for a living. Check out how their brilliance!!!,2,t,2019-06-18 11:02:21.864315,2019-06-18 11:02:21.864315
+15,AnalTuck,Anal Tuck,/filez/demos/analtuck.lzh,Local copy.,4,t,2019-06-18 11:02:21.874350,2019-06-18 11:02:21.874350
+16,AnalTuck1,Anal Tuck,ftp://ftp.funet.fi/pub/atari/falcon/demo/analtuck.lzh,Mirror 1.,4,t,2019-06-18 11:02:21.884315,2019-06-18 11:02:21.884315
+17,AnalTuck2,Anal Tuck,ftp://sunsite.doc.ic.ac.uk/computing/systems/atari/umich/Falcon/Demos/analtuck.lzh,Mirror 2.,4,t,2019-06-18 11:02:21.894315,2019-06-18 11:02:21.894315
+18,AnalTuck3,Anal Tuck,ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/96kdemos/ANALTUCK.LZH,Mirror 3.,4,t,2019-06-18 11:02:21.903942,2019-06-18 11:02:21.903942
+19,Atuck1,atuck1,/images/demos/atuck.gif,A legend is born!!!!,5,t,2019-06-18 11:02:21.913942,2019-06-18 11:02:21.913942
+20,ColonicIrrigation,Colonic Irrigation,/filez/demos/senior.lzh,Local copy.,4,t,2019-06-18 11:02:21.923738,2019-06-18 11:02:21.923738
+21,ColonicIrrigation1,Colonic Irrigation,ftp://ftp.funet.fi/pub/atari/falcon/demo/senior.lzh,Mirror 1.,4,t,2019-06-18 11:02:21.933769,2019-06-18 11:02:21.933769
+22,ColonicIrrigation2,Colonic Irrigation,ftp://sunsite.doc.ic.ac.uk/computing/systems/atari/umich/Falcon/Demos/senior.lzh,Mirror 2.,4,t,2019-06-18 11:02:21.943465,2019-06-18 11:02:21.943465
+23,ColonicIrrigation3,Colonic Irrigation,ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/senior.lzh,Mirror 3.,4,t,2019-06-18 11:02:21.953455,2019-06-18 11:02:21.953455
+24,Colonic1,colonic1,/images/demos/colonic.gif,Back with a splash!!(!!),5,t,2019-06-18 11:02:21.963427,2019-06-18 11:02:21.963427
+25,LAubeDuMatinDuSoirIIRemix,L' Aube Du Matin Du Soir II (Remix),/filez/demos/ladmds2.lzh,Local copy.,4,t,2019-06-18 11:02:21.973452,2019-06-18 11:02:21.973452
+26,LAubeDuMatinDuSoirIIRemix1,L' Aube Du Matin Du Soir II (Remix),ftp://ftp.funet.fi/pub/atari/falcon/demo/ladmds2.lzh,Mirror 1.,4,t,2019-06-18 11:02:21.983802,2019-06-18 11:02:21.983802
+27,LAubeDuMatinDuSoirIIRemix2,L' Aube Du Matin Du Soir II (Remix),ftp://ftp.ibp.fr/pub/atari/Demos/ladmds2.lzh,Mirror 2.,4,t,2019-06-18 11:02:21.996770,2019-06-18 11:02:21.996770
+28,LAubeDuMatinDuSoirIIRemix3,L' Aube Du Matin Du Soir II (Remix),ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/ladmds2.lzh,Mirror 3.,4,t,2019-06-18 11:02:22.008766,2019-06-18 11:02:22.008766
+29,Ladmds21,ladmds2_1,/images/demos/ladmds2.gif,Our first big one!!(!!),5,t,2019-06-18 11:02:22.021768,2019-06-18 11:02:22.021768
+30,AirdirtDemo,The Airdirt Demo,/filez/demos/air_dirt.lzh,Local copy.,4,t,2019-06-18 11:02:22.037767,2019-06-18 11:02:22.037767
+31,AirdirtDemo1,The Airdirt Demo,ftp://ftp.funet.fi/pub/atari/falcon/demo/air_dirt.lzh,Mirror 1.,4,t,2019-06-18 11:02:22.047767,2019-06-18 11:02:22.047767
+32,AirdirtDemo2,The Airdirt Demo,ftp://ftp.ibp.fr/pub/atari/Falcon/Demos/air_dirt.lzh,Mirror 2.,4,t,2019-06-18 11:02:22.057768,2019-06-18 11:02:22.057768
+33,AirdirtDemo3,The Airdirt Demo,ftp://ftp.uni-kl.de/pub/atari/falcon/gfx_demos/air_dirt.lzh,Mirror 3.,4,t,2019-06-18 11:02:22.066765,2019-06-18 11:02:22.066765
+34,Airdirt1,airdirt1,/images/demos/airdirt.jpg,The screen that launched a new era in Atari demoes!!!!,5,t,2019-06-18 11:02:22.077768,2019-06-18 11:02:22.077768
+35,STFloormatDemo,The ST Floormat Demo,/filez/demos/stflrmat.zip,Local copy.,4,t,2019-06-18 11:02:22.089767,2019-06-18 11:02:22.089767
+36,STFloormatDemo1,The ST Floormat Demo,ftp://ftp.funet.fi/pub/atari/demo/stflrmat.zip,Mirror 1.,4,t,2019-06-18 11:02:22.100770,2019-06-18 11:02:22.100770
+37,STFloormatDemo2,The ST Floormat Demo,ftp://ftp.ibp.fr/pub/atari/Demos/stflrmat.zip,Mirror 2.,4,t,2019-06-18 11:02:22.111766,2019-06-18 11:02:22.111766
+38,Floormat1,floormat1,/images/demos/floormat.gif,This is what happens when inferior coders ripp you off!!!!,5,t,2019-06-18 11:02:22.122803,2019-06-18 11:02:22.122803
+39,AntiTecknoTecknoDemo,"The ""Anti Teckno"" Teckno Demo",/filez/demos/teckno.zip,Local copy.,4,t,2019-06-18 11:02:22.132794,2019-06-18 11:02:22.132794
+40,AntiTecknoTecknoDemo1,"The ""Anti Teckno"" Teckno Demo",ftp://ftp.funet.fi/pub/atari/demo/teckno.lzh,Mirror 1.,4,t,2019-06-18 11:02:22.142767,2019-06-18 11:02:22.142767
+41,AntiTecknoTecknoDemo2,"The ""Anti Teckno"" Teckno Demo",ftp://ftp.ibp.fr/pub/atari/Demos/tekno.lzh,Mirror 2.,4,t,2019-06-18 11:02:22.155768,2019-06-18 11:02:22.155768
+42,Teckno1,teckno1,/images/demos/teckno.gif,HARDCORE YOU KNOW THA SCORE!!!!,5,t,2019-06-18 11:02:22.168766,2019-06-18 11:02:22.168766
+43,AntiTecknoTecknoDemo3,"The ""Anti Teckno"" Teckno Demo",/filez/demos/xmas97.zip,Local copy.,4,t,2019-06-18 11:02:22.178768,2019-06-18 11:02:22.178768
+44,Xmas971,xmas97_1,/images/demos/xmas97.jpg,"Merrey Xmas, everyboddy!!!!",5,t,2019-06-18 11:02:22.187777,2019-06-18 11:02:22.187777
+45,DadPlazz,DadPlazz!,/filez/demos/dadplazz.zip,Local copy.,4,t,2019-06-18 11:02:22.197767,2019-06-18 11:02:22.197767
+46,Dadplazz1,dadplazz1,/images/demos/dadplazz.png,Can you believe this was done in 128 bytes?!?!?,5,t,2019-06-18 11:02:22.206768,2019-06-18 11:02:22.206768
+47,MonoMental,Mono-Mental!,/filez/demos/monomntl.zip,Local copy.,4,t,2019-06-18 11:02:22.215768,2019-06-18 11:02:22.215768
+48,Mono1,mono1,/images/demos/mono/testcard.gif,Back to mono!!!!,5,t,2019-06-18 11:02:22.224771,2019-06-18 11:02:22.224771
+49,UltimateFakeDemo,The Ultimate Fake Demo,/filez/demos/fake.zip,Local copy.,4,t,2019-06-18 11:02:22.242772,2019-06-18 11:02:22.242772
+50,Fake1,fake1,/images/demos/fake.gif,Our first FAKE demo!!!,5,t,2019-06-18 11:02:22.256787,2019-06-18 11:02:22.256787
+51,Sdpresents,sd_presents,/images/demos/presents.gif,The way we start our demos.,5,t,2019-06-18 11:02:22.267768,2019-06-18 11:02:22.267768
+52,Ladmds2,ladmds2,/images/demos/ladmds2.gif,An abstract title page.,5,t,2019-06-18 11:02:22.279769,2019-06-18 11:02:22.279769
+53,Airdirt11,airdirt1,/images/demos/airdirt.jpg,An impressionistic demo intro page.,5,t,2019-06-18 11:02:22.288768,2019-06-18 11:02:22.288768
+54,OldFart,OldFart,/images/oldfart.jpg,A portrait created for the Air Dirt Demo.,15,t,2019-06-18 11:02:22.298770,2019-06-18 11:02:22.298770
+55,DodderingGit,DodderingGit,/images/dodgit.jpg,A portrait created for the Air Dirt Demo.,15,t,2019-06-18 11:02:22.308768,2019-06-18 11:02:22.308768
+56,DameVeraLynn,DameVeraLynn,/images/damevera.jpg,A portrait created for the Air Dirt Demo.,15,t,2019-06-18 11:02:22.318768,2019-06-18 11:02:22.318768
+57,JacksonPollock,JacksonPollock,/images/jpollock.jpg,A portrait created for the Air Dirt Demo.,15,t,2019-06-18 11:02:22.327768,2019-06-18 11:02:22.327768
+58,ColostomyBag,ColostomyBag,/images/colostomy.gif,"CB joined later, and I did a nice portait for him in Photoshop!",15,t,2019-06-18 11:02:22.337768,2019-06-18 11:02:22.337768
+59,Fanfare,fanfare,/filez/music/fanfare.zip,Local copy.,9,t,2019-06-18 11:02:22.346768,2019-06-18 11:02:22.346768
+60,theme,theme,/filez/music/sdtheme.zip,Local copy.,9,t,2019-06-18 11:02:22.355765,2019-06-18 11:02:22.355765
+61,Laurent,laurent,/filez/music/laurent.zip,Local copy.,9,t,2019-06-18 11:02:22.365769,2019-06-18 11:02:22.365769
+62,Liam,liam,/filez/music/burp.zip,Local copy.,9,t,2019-06-18 11:02:22.377767,2019-06-18 11:02:22.377767
+63,MoveYourAss,MoveYourAss,/filez/music/moveuass.zip,Local copy.,9,t,2019-06-18 11:02:22.387768,2019-06-18 11:02:22.387768
+64,XmasBalls,XmasBalls,/filez/music/xmas97.zip,Local copy.,9,t,2019-06-18 11:02:22.396765,2019-06-18 11:02:22.396765
+65,NeverMindPistols,NeverMindThePistols,/filez/music/teckno.zip,Local copy.,8,t,2019-06-18 11:02:22.406770,2019-06-18 11:02:22.406770
+66,PastIsAnUndiscoveredCountry,PastIsAnUndiscoveredCountry,/filez/music/mono.zip,Local copy.,8,t,2019-06-18 11:02:22.416769,2019-06-18 11:02:22.416769
+67,RaseroTeam,RaseroTeam,/filez/music/rasero.zip,Local copy.,8,t,2019-06-18 11:02:22.426321,2019-06-18 11:02:22.426321
+68,xmas97,Xmas Card 97,/filez/demos/xmas97.zip,Local copy.,4,t,2019-06-18 11:02:22.436322,2019-06-18 11:02:22.436322
+69,DadPlazz,DadPlazz!,/filez/demos/dadplazz.zip,Local copy.,4,t,2019-06-18 11:02:22.446312,2019-06-18 11:02:22.446312
+70,MonoMental,Mono-Mental!,/filez/demos/monomntl.zip,Local copy.,4,t,2019-06-18 11:02:22.456301,2019-06-18 11:02:22.456301
+71,UltimateFakeDemo,The Ultimate Fake Demo,/filez/demos/fake.zip,Local copy.,4,t,2019-06-18 11:02:22.466337,2019-06-18 11:02:22.466337
