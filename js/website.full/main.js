@@ -7,7 +7,12 @@ $(document).ready( function() {
 	FAQify();
 	
 	// Old school blinking!
-	$('.blink').modernBlink();
+	//$('.blink').each( function () {
+	//	blinker($(this));
+	//});
+	$('.blink').animate({
+	    opacity: 0.5
+	  }, 500);
 	// Set last updated for page.
 	$('.lastUpdated').append('Last updated: ' + document.lastModified);
 	// Set last updated for URL.
@@ -166,5 +171,14 @@ $(document).ready( function() {
 			// Finally, replace area with altered output.
 			$(this).html(output);
 		});
+	}
+	
+	function blinker( element ) {
+		function blink_element() {
+		    $('.blink').fadeOut(500, function() {
+		    	$('.blink').fadeIn(500);
+		    });
+		}
+		setInterval(blink_element, 1000);
 	}
 });
