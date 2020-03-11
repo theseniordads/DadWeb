@@ -1,9 +1,0 @@
----
-layout: senior
-title: Watch out Captain Kirk, here comes the Square Kilometre Array!!!!!!
-type: story
-id: 892710
-date: 2000-09-21 16:05
-robots: noindex
----
-Now this is vaguely interesting!!!! A new telescope, the <a href="http://www.sunday-times.co.uk/news/pages/sti/2000/09/10/stifgnnws01001.html">Square Kilometre Array (SKA)</a>, is being built!!! So wot you might bawl!!!! Well, it's a square kilometer, erm, array of radio telescopes!!!!!! It's likely to be built in Australia!!!!!!!!!<br/> <br/>Not interested yet???! How about this- it's going to be the most sensitive astronomical instrument ever made!!!! (Which actually sounds jolly rude!!!!!! I mean, I've got a rather sensitive "instrument" myself, which is pretty astronomical by all accounts!!!! But you won't see me "constructing" in to Australia!!!!!!!! Unless I go there on holiday of course.) <br/> <br/>OK- hows about this for interesting, then!!!!! It's designed to search for <b>spacealiens</b>!!!!!! <i>"Such a discovery will change our perception of our role in the cosmos. This telescope will be a great scientific instrument, but its effect on humanity could be profound."</i> said some bloke.<br/> <br/>Wot do mean you're bored!!!!!!! OK, how about this: the plans are being drawn up by the <b>United Nations</b>!!!!!!<br/> <br/>Aha!!!!! I've got your attention now!!!!!! I expect you're saying <i>"What the flippy do-dahs is the UN doing getting involved in this stuffs, as opposed to fielding ineffectual "peace-keeping" troops, or whatever it is they normally they do!!!!!"</i> Well, I dunno!!!!! But here's a theory of mine: they want to make First Contact!!!!! Yep, you've guessed the UN have been inspired by Star Trek and want to turn themselves into <b>The Federation</b>!!!!!!<br/> <br/>And if the name of the telescope is anything to go by, the Star Trek theme will probably be perfomed by <a href="http://www.bosstones.com/"><b>The Mighty Mighty Bosstones</b></a>!!!!!!<br/>

@@ -42,6 +42,7 @@ for archive_url in links_list:
         print('Archive URL found: %s' % (link_url))
         archive_urls.append(link_url)
         
+# Now extract all the posts
 for archive_url in archive_urls:
     raw_html = simple_get(archive_url)
     html = BeautifulSoup(raw_html, 'html.parser')
@@ -60,6 +61,7 @@ for archive_url in archive_urls:
         date_string = post_year + '-' + post_month + '-' + post_day
         posts = day_archive.select('div.date-posts > div.post-outer')
         print('%s posts found.' % (len(posts)))
+        grouped_tags = []
         for post in posts:
             title = post.select('h3.post-title')
             article_body = post.select('div.post > div.post-body')[0]
@@ -80,6 +82,15 @@ for archive_url in archive_urls:
                     title = title[0].text
             else:
                 title = title[0].text
+            tags = post.select('span.post-labels')
+            if len(tags) > 0:
+                tags = tags[0].text.replace('\n', ' ').replace('Labels: ', ' ').strip().split(',')
+                if len(tags) == 1 and tags[0] == '':
+                    tags = None
+                else:
+                    print("Tags found: %s" % tags)
+            else:
+                tags = None
             post_content_block = article_body.find('div', { 'class': re.compile('(story|editorial|slogan|linkoid)') })
             if post_content_block:
                 post_type = post_content_block.attrs.get('class')[0]
@@ -105,16 +116,44 @@ for archive_url in archive_urls:
             post_timestamp = date_string + ' ' + post_time
             
             # Check folder is created for posts
-            target_folder = os.path.join(post_year, post_month)
+            target_month_folder = os.path.join(post_year, post_month)
+            target_day_folder = os.path.join(target_month_folder, post_day)
             if not os.path.isdir(post_year):
                 os.makedirs(post_year)
-            if not os.path.isdir(target_folder):
-                os.makedirs(target_folder)
-            target_file = os.path.join(target_folder, filename)
+            if not os.path.isdir(target_month_folder):
+                os.makedirs(target_month_folder)
+            if not os.path.isdir(target_day_folder):
+                os.makedirs(target_day_folder)
+            target_file = os.path.join(target_day_folder, filename)
+            #target_title = re.escape(title.replace('\n', ''))
+            target_title = line = re.sub(r'([\'\"]+)', r'\\\1', title.replace('\n', ''))
             
-            output_file = open(target_file, "w")
-            output_file.write("---\nlayout: senior\ntitle: " + title.replace('\n', '') + "\ntype: " + post_type + 
-                            "\nid: " + post_id + 
-                            "\ndate: " + post_timestamp + 
-                            "\nrobots: noindex\n---\n" + post_content)
-            output_file.close()
+            with open(target_file, "w", encoding='utf8') as output_file:
+                print(f"---\nlayout: senior2\ntitle: \"{target_title}\"", file=output_file)
+                print(f"type: {post_type}", file=output_file)
+                print(f"id: {post_id}", file=output_file)
+                print(f"date: {post_timestamp}", file=output_file)
+                print(f"day: {date_string}", file=output_file)
+                if tags:
+                    if len(tags) > 0:
+                        print(f"tags:", file=output_file)
+                        for tag in tags:
+                            tag = tag.strip()
+                            print(f"- {tag}", file=output_file)
+                            grouped_tags.append(tag)
+                print(f"robots: noindex\n---\n{post_content}", file=output_file)
+
+        target_day_filename = os.path.join(target_day_folder, date_string + "-index.md")
+        print('Creating day post for %s. Writing to %s' % (date_string, target_day_filename) )
+        with open(target_day_filename, "w", encoding='utf8') as output_file:
+            print(f"---\nlayout: senior2_day\ntitle: \"{date_string}\"", file=output_file)
+            print(f"type: day", file=output_file)
+            print(f"id: {date_string}", file=output_file)
+            print(f"date: {date_string}", file=output_file)
+            if grouped_tags:
+                if len(grouped_tags) > 0:
+                    print(f"tags:", file=output_file)
+                    for tag in grouped_tags:
+                        tag = tag.strip()
+                        print(f"- {tag}", file=output_file)
+            print(f"robots: noindex\n---\n", file=output_file)

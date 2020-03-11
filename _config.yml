@@ -44,7 +44,9 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+   - scripts/
    - src/
+   - venv/
    - build.ps1
    - runserver_dev.ps1
    - category_generator.py

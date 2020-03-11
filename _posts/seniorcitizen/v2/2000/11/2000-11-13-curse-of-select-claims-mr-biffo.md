@@ -1,9 +1,0 @@
----
-layout: senior
-title: Curse of "Select" claims Mr Biffo!!!!!
-type: story
-id: 1353188
-date: 2000-11-13 18:38
-robots: noindex
----
-Crikey!!!!!! If being name-checked by <a href="http://seniorcitizen.blogspot.com/archives/2000_10_22_seniorcitizen_archive.html#1176001"><b>Chumbawumba</b></a> wasn't a sure enough kiss of death, then there's always <b>Select</b> magazine here in the UK!!!!! This month, it claims that apparently the Internet used to be full of anoracks and therefore completely inoffensive and non-revolutionary in every way!!!!!!!! But now it has a got a few more people like them, (Now that they've got someone to connect their Macs to tha NetWeb!!!!) and therefore the Net has got some "attitude" and other dead-tree media rock 'n' roll cliches!!!!!!!! And then they go on to mention a few webzines, half of which nearly everyone knows about, and the other half, no-one would really want to know about!!!!!! So it's basically just like another web-blog, only even more snooty!!!!!!!!!!!<br/> <br/>And so bloody wot, you might say!!!!!!!!! Well, OK, you might expect nothing less from a bunch of sad spods who actually call themselves <a href="http://www.magazineshop.co.uk/product.asp?mag=select"><i>"Britain's only music culture magazine."</i></a>!!!!!!!!!!!!!! But they're latest victims of the Curse of Select include none other than Teletext's <a href="http://www.teletext.co.uk/digitiser/"><b>Digitiser</b></a> scribe, Mr Biffo, and his not-too-bad "adult humour" site <a href="http://www.bubblegun.com/"><b>Bubblegun</b></a>!!!!!!!!! Which was already inactive by the time Select's feature went to press!!!!!!!!! And Biffo doesn't know when it's getting resurrected!!!!!!!!!<br/> <br/>So Select's just done a feature which says the internet is more exciting than it used to be- by doing the same thing as everyone else did when it was supposed to be "nerdy", and reporting on a now inactive website!!!!!!!!! And they get paid for this!!!!!!!

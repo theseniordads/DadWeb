@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header row">
+  	<div class="col">
+    	<h1 class="post-title">Category is: <span class="badge badge-info">{{ page.date }}</span></h1>
+    </div>
+  </header>
+
+  <div class="post-content">
+  	{%- if content != "" -%}
+  	<div class="row">
+  		<div class="col">
+  			{{ content }}
+  		</div>
+  	</div>
+  	{%- endif -%}
+  	<div class="row">
+  		<div class="col">
+			<ul>
+			{% assign posts = site.days[page.date] %}
+			{% if posts %}
+				{% assign sorted_posts = posts | sort: 'date' %}
+				{% for post in sorted_posts %}
+				  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})
+				  </li>
+				{% endfor %}
+			{% endif %}
+			</ul>
+		</div>
+	</div>
+  </div>
+</article>
