@@ -1,0 +1,122 @@
+body#crew {
+  background-image: url(images/sad_bak2.gif);
+
+  table#dudes {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: var(--grey);
+    margin-right: auto;
+    margin-left: auto;
+
+    .header,
+    .member {
+      font-weight: bold;
+      @extend .bigger2
+    }
+
+    .member {
+      color: var(--white);
+      text-align: center;
+    }
+
+    .question {
+      font-weight: bold;
+    }
+  }
+
+  #SDFaq {
+    #heading {
+      font-weight: bold;
+
+      ol {
+        counter-reset: headingCounter;
+        list-style-type: none;
+
+        li {
+          counter-increment: headingCounter;
+
+          &:before {
+            content: counters(headingCounter, '.') '. ';
+          }
+        }
+      }
+    }
+
+    .faq {
+      @extend .highlight;
+    }
+
+    #main {
+      .questionList {
+        $indent: 40px;
+        counter-reset: headingCounter;
+
+        .question {
+          counter-increment: headingCounter;
+
+          &:before {
+            content: counters(headingCounter, '.') '. ';
+          }
+
+          padding-left: $indent;
+          $size: 36px;
+
+          font: {
+            size: $size;
+            weight: bold;
+          }
+
+          .question {
+            font-size: $size * 0.75;
+
+            .question {
+              font-size: $size * 0.65;
+            }
+          }
+        }
+
+        .answer {
+          padding-left: $indent;
+
+          font: {
+            weight: initial;
+            size: initial;
+          }
+
+          #CrewList {
+            .member {
+              font-weight: bold;
+            }
+          }
+
+          .answeredBy {
+            @extend .highlight;
+            font-style: italic;
+          }
+
+          #OldCrewList {
+            td {
+              padding: 5px;
+            }
+
+            .oldname {
+              text-align: right;
+            }
+
+            .equals {
+              text-align: center;
+            }
+
+            .oldname {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

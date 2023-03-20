@@ -1,6 +1,14 @@
 /* SENIO-STYLE!!!!! */
 
-$mainTextCol: Yellow;
+:root {
+  --red: #FF0000;
+  --white: #FFFFFF;
+  --yellow: #FFFF00;
+  --grass-green: #77ff00;
+  --grey: #808080;
+
+  --main-text-col: var(--yellow);
+}
 
 @mixin linkCol($link, $visited, $hover, $active) {
 	a {
@@ -26,17 +34,20 @@ $mainTextCol: Yellow;
 }
 
 @mixin mainTextStyle {
-	color: $mainTextCol;
+	color: var(--main-text-col);
 	font: {
 		family : Times New Roman, Times, Garamond, serif;
 		size: 14px;
 		weight: normal;
 	}
-	@include linkCol( #77ff00, red, white, white );
+	@include linkCol( var(--grass-green), var(--red), var(--white), var(--white) );
+  a {
+    text-decoration: underline;
+  }
 }
 
 @mixin preFormattedText {
-  white-space: pre ;
+  white-space: pre;
   display: block;
   unicode-bidi: embed;
   font-family: Courier, san-serif;
@@ -47,6 +58,7 @@ $mainTextCol: Yellow;
 @keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
 
 body {
+  padding: 1%;
 	@include mainTextStyle;
 	background: {
 		color: #000077;
@@ -54,7 +66,7 @@ body {
 		repeat: repeat;
 	}
 	.highlight {
-		color: white;
+		color: var(--white);
 	}
 	.blink {
 		animation: blinker 1s step-end infinite;
@@ -71,10 +83,17 @@ body {
 			right: auto;
 		}
 	}
-
-	&#crew {
-		background-image: url(images/sad_bak2.gif);
-	}
+  hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;   
+  } 
 
     &#demos {
       .highlight {
@@ -412,30 +431,6 @@ body {
   }
 }
 
-#homeMenu {
-  .menuItem {
-    height: 151px;
-    position: relative;
-    .icon {
-      @include position( 0px, 0px );
-      width: 350px;
-      height: 150px;
-      img {
-        width: 350px;
-        height: 150px;
-        cursor: pointer;
-      }
-    }
-    .text {
-      @include position( 350px, 0px );
-      text-align: left;
-      margin: {
-        bottom: auto;
-        top: auto;
-      }
-    }
-  }
-}
 
 .noscript {
   width: 80%;
@@ -458,104 +453,8 @@ body {
   font-size: x-large;
 }
 
-table#dudes{
-  .header, .member {
-    font-weight: bold;
-    @extend .bigger2
-  }
-  .member {
-    color: white;
-    text-align: center;
-  }
-  .question {
-    font-weight: bold;    
-  }
-}
-
 #SDTextTitle {
 	width: 35%;
-}
-
-#SDFaq {
-//  counter-reset: level1;
-//  counter-reset: level2;
-//  counter-reset: level3;
-
-  #heading {
-    font-weight: bold;
-    ol {
-      counter-reset: headingCounter;
-      list-style-type:none;
-      li {
-        counter-increment: headingCounter;
-        &:before {
-          content:counters(headingCounter, '.') '. ';
-        }
-      }
-    }
-  }
-  .faq {
-    @extend .highlight;
-  }
-  
-  #main {
-
-    
-    .questionList {
-      $indent: 40px;
-      counter-reset: headingCounter;
-      .question {
-        counter-increment: headingCounter;
-        &:before {
-          content:counters(headingCounter, '.') '. ';
-        }
-        padding-left: $indent;
-        $size: 36px;
-        font: {
-          size: $size;
-          weight: bold;
-        }
-        .question {
-          font-size: $size * 0.75;
-          .question {
-          font-size: $size * 0.65;
-          }
-        }
-      }
-      .answer {
-        padding-left: $indent;
-        font: {
-          weight: initial;
-          size: initial;
-        } 
-        #CrewList {
-          .member {
-            font-weight: bold;
-          }
-        }
-        
-        .answeredBy {
-          @extend .highlight;
-          font-style: italic;
-        }
-        
-        #OldCrewList {
-          td {
-            padding: 5px;
-          }
-          .oldname {
-            text-align: right;
-          }
-          .equals {
-            text-align: center;
-          }
-          .oldname {
-            text-align: left;
-          }
-        }
-      }
-    }
-  }
 }
 
 #choons {
@@ -632,3 +531,6 @@ table#dudes{
     }
   }
 }
+
+@import "page/index.scss";
+@import "page/crew.scss";

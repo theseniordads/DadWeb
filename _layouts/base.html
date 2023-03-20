@@ -1,7 +1,10 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {%- include head.html -%}
-  <body>
+  <body{% if page.style %} id="{{ page.style }}{% endif %}">
   	{%- include no_javascript.html -%}
         {{ content }}
     {%- include bootstrap.html -%}

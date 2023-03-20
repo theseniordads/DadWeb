@@ -4,17 +4,17 @@ $(document).ready( function() {
 	visitorCounter();
 	leetSpeak();
 	headers();
-	FAQify();
+	//FAQify();
 	
 	// Old school blinking!
-	//$('.blink').each( function () {
-	//	blinker($(this));
-	//});
-	$('.blink').animate({
+	/*$('.blink').each( function () {
+		blinker($(this));
+	});*/
+	/*$('.blink').animate({
 	    opacity: 0.5
-	  }, 500);
+	  }, 500);*/
 	// Set last updated for page.
-	$('.lastUpdated').append('Last updated: ' + document.lastModified);
+	//$('.lastUpdated').append('Last updated: ' + document.lastModified);
 	// Set last updated for URL.
 	$('.urlLastUpdated').each( function() {
 		var element = $(this);
@@ -57,10 +57,11 @@ $(document).ready( function() {
     });
 
     // "More" links
+	/*
     $('.more').each(function() {
         $(this).attr('title','[ m0R3!!!11!1 ]');
         $('.link').click(function(){ window.location = $(this).attr('rel'); });
-    });
+    });*/
 
     // Doddering Git's "l33TsP33k" styling
 	function leetSpeak() {
@@ -175,8 +176,8 @@ $(document).ready( function() {
 	
 	function blinker( element ) {
 		function blink_element() {
-		    $('.blink').fadeOut(500, function() {
-		    	$('.blink').fadeIn(500);
+		    $('.blink').fadeOut('fast', function() {
+		    	$('.blink').fadeIn('fast');
 		    });
 		}
 		setInterval(blink_element, 1000);

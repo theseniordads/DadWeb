@@ -1,0 +1,16 @@
+---
+layout: base
+---
+{% include last_updated.html %}
+<div id="subHeaderWrapper">
+    <div id="subHeader">
+        <div class="link" id="sd" rel="{{ "/" | relative_url }}" title="s33N10r"></div>
+        {% if page.is_index %}
+        <div id="title" title="d00Dz!!1!" alt="d00Dz!!1!"></div>
+        {% else %}
+        <a href="{{ "/crew/" | relative_url }}"><div id="title" title="d00Dz!!1!" alt="d00Dz!!1!"></div></a>
+        {% endif %}
+    </div>
+</div>
+<hr width="100%">
+{{ content }}
