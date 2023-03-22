@@ -51,10 +51,10 @@ $(document).ready( function() {
 	$('.link').click(function(){ window.location = $(this).attr('rel'); });
 
     // "Saggie" in demo pages
-    $('#saggie .title').each(function() {
+ /*   $('#saggie .title').each(function() {
         $(this).attr('title','sAgG13!!!1!');
         $(this).click(function(){ window.location = '/default.html'; });
-    });
+    });*/
 
     // "More" links
 	/*

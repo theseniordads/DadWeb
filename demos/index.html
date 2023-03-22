@@ -22,6 +22,15 @@ is_index: true
     m0R3=aH d33 1nF0z3!!!!!"</p><a href="{{ "/demos/pc.html" | relative_url }}"><img align="right" alt="pAc1F1sT c0MpAt1Bl3!!1!" height="60"
         src="{{ "/assets/images/demos/pacifist.gif" | relative_url }}" title="pAc1F1sT c0MpAt1Bl3!!1!" width="147"></a>
 <ol id="DemoList" start="8" type="a">
+    {% assign demos = site.demos | sort: 'order' %}
+    {% for demo in demos %}
+        {% capture demo_url %}{{ demo.id }}.html{% endcapture %}
+    <li>
+        <div class="title"><a href="{{ demo_url | relative_url }}">{{ demo.listing.heading }}</a></div>
+        <div class="subheading">{{ demo.listing.description }}</div>
+    </li>
+    {% endfor %}
+    {% comment %}
     <li>
         <div class="title"><a href="{{ "/demos/atuck.html" | relative_url }}">aNaL tUcK</a>!!!1</div>
         <div class="subheading">0uR k3Wl <strong>fR13d b1Tz 3</strong> 96k-tR0!!!</div>
@@ -46,7 +55,7 @@ is_index: true
         <div class="title">tHa <a href="{{ "/demos/teckno.html" | relative_url }}">&lt;&lt;aNt1 t3kKn0&gt;&gt; t3kKn0</a>d3M0!!11\!</div>
         <div class="subheading">tH3 <strong>f1RzT</strong> k1Ll3R d3M0 tHaT <strong><a
                     href="{{ "/crew/index.html#Jackson_Pollock" | relative_url }}">jAcKs0N p0Ll0Ck</a></strong> &amp;&amp; <strong><a
-                    href="{{ "//crew/index.html#Dame_Vera_Lynn" | relative_url }}">dAm3 v3Ra lYnN</a></strong> d1D!!!1 !!1!</div>
+                    href="{{ "/crew/index.html#Dame_Vera_Lynn" | relative_url }}">dAm3 v3Ra lYnN</a></strong> d1D!!!1 !!1!</div>
     </li>
     <li>
         <div class="title">dA <a href="{{ "/demos/xmas97.html" | relative_url }}">xMaS cArD i997</a>!!11!1!</div>
@@ -64,5 +73,6 @@ is_index: true
         <div class="title">tH33 <a href="{{ "/demos/fake.html" | relative_url }}">uLt1MaT3 fAk3 d3M0</a>!!111</div>
         <div class="subheading">0uR tHr33!11! p01Nt w1Nn1Ng <strong>aLt\pArT33</strong> d3M0!!11!1!</div>
     </li>
+    {% endcomment %}
 </ol>
 

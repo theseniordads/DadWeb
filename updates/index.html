@@ -1,0 +1,22 @@
+---
+title: LAtest Updates!!
+is_index: true
+layout: updates
+---
+{% assign latest_updates = site.updates | sort: 'date' | reverse %}
+<ul class="post-list">
+{% for update in latest_updates %}
+<li>
+    {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <span class="post-meta">{{ update.date | date: date_format }}</span>
+    <h3>
+      <a class="post-link" href="{{ update.url | relative_url }}">
+        {{ update.title | escape }}
+      </a>
+    </h3>
+    {% if site.show_excerpts %}
+      {{ update.excerpt | strip_html }} ... [<a href="{{ update.url | relative_url }}">More</a>]
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

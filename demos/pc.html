@@ -27,6 +27,20 @@ author: Doddering Git of The Senior Dads
     <p></p>
 </div>
 <ol id="DemoList" start="8" type="a">
+    {% assign demos = site.demos | where: 'pacifist_compatible', true | sort: 'order' %}
+    {% if demos.size == 0 %}
+    <h1>DEMOLIST!!!!!!</h1>
+        <p>Err, we're still adding demoes!!!!</p>
+    {% else %}
+        {% for demo in demos %}
+            {% capture demo_url %}{{ demo.id }}.html{% endcapture %}
+            <li>
+                <div class="title"><a href="{{ demo_url | relative_url }}">{{ demo.listing.heading }}</a></div>
+                <div class="subheading">{{ demo.listing.description }}</div>
+            </li>
+        {% endfor %}
+    {% endif %}
+    {% comment %}
     <li>
         <div class="title"><a href="{{ "/demos/ladmds2.html" | relative_url }}">//a l;AuB3 dU mAt1N dU s01R iI//</a></div>
         <div class="subheading">0uR c0-pR0dUcT10n with,,,, <strong class="l33TsP33kExtra">aTr0c1tY</strong>!!!!111</div>
@@ -49,5 +63,6 @@ author: Doddering Git of The Senior Dads
         <div class="title">tH33 <a href="{{ "/demos/fake.html" | relative_url }}">uLt1MaT3 fAk3 d3M0</a>!!111</div>
         <div class="subheading">0uR tHr33!11! p01Nt w1Nn1Ng <strong>aLt\pArT33</strong> d3M0!!11!1!</div>
     </li>
+    {% endcomment %}
 
 </ol>

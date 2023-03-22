@@ -1,5 +1,5 @@
 {% assign date_format = '%b %-d, %Y %H:%M' %}
-<div class="lastUpdated">Last updated: 
+<div class="lastUpdated"><a href="{{ "/updates/" | relative_url }}">Last updated</a>: 
     {% if page.last_modified_at %}
     {{ page.last_modified_at | date: date_format }}
     {% else %}

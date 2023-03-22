@@ -1,0 +1,159 @@
+
+body#demos {
+    .highlight {
+      font-style: italic;
+    }
+
+
+    #demoStats {
+      width: 100%;
+      display: block;
+      .container {
+        width: 80%;
+        min-height: 240px;
+        position: relative;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        .stats {
+          width: 50%;
+          .header {
+            font: {
+              size: xx-large;
+              weight: bold;
+            }
+          }
+          .platform {
+            @include preFormattedText;
+          }
+          .released {
+            color: white;
+          }
+          .downloads {
+            .mainfile {
+              width: 100%;
+              @include preFormattedText;
+            }
+            .mirrors {
+              width: 100%;
+              ul
+              {
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                li {
+                  display: inline;
+                  float: left;
+                  padding: 4px;
+                }
+              }
+            }
+            img.disk {
+              height: 37px;
+              width: 34px;
+            }
+          }
+        }
+        .image {
+          width: 50%;
+          text-align: center;
+          @include position(50%,0px);
+        }
+      }
+    }
+
+    #description {
+      clear: both;
+    }
+
+    #creditsWrapper {
+      width: 100%;
+      #credits, #creditsExpanded {
+        width: 40%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+        .header {
+          width: 100%;
+          text-align: center;
+          font: {
+            size: 150%;
+            weight: bold;
+          }
+        }
+        .credit {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          font-weight: bold;
+          .deed, .by {
+            padding: 4px;
+          }
+          .by {
+            font-style: italic;
+            text-align: right;
+          }
+        }
+      }
+
+      #creditsExpanded {
+        width: 80%;
+        .deed, .by {
+          width: 30%;
+        }
+        .detail {
+          width: 30%;
+        }
+      }
+    }
+
+    #saggie {
+      width: 100%;
+      position: relative;
+      margin-bottom: 1em;
+      .title {
+        width: 164px;
+        height: 120px;
+        background: url(images/features/saggie/saggie_mini.gif) center;
+        margin-right: 10px;
+      }
+      .feature {
+        @include position(174px, 0px);
+        font: {
+          size: 150%;
+          weight: bold;
+        }
+      }
+    }
+
+  }
+  body#monomental {
+      color: white;
+      background: {
+          color: black;
+          image: url(images/demos/mono/sad_back.gif);
+      } 
+      @include linkCol( #AAAAAA, #999999, #FFFFFF, #FFFFFF );
+  }
+
+#demos {
+  ol#DemoList {
+    li {
+      .title {
+        font: {
+          size: 160%;
+          style: italic;
+        }
+      }
+      .subheading {
+        font: {
+          size: 140%;
+          weight: bold;
+        }
+      }
+    }
+  }
+}
+

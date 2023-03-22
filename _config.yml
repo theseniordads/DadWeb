@@ -21,6 +21,7 @@ baseurl: "/DadWeb" # the subpath of your site, e.g. /blog
 url: "https://alephnaughtpix.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alephnaught
 github_username:  alephnaughtpix
+show_excerpts: True
 
 # Build settings
 markdown: kramdown
@@ -52,9 +53,17 @@ exclude:
    - category_generator.py
    - tag_generator.py
 
+collections:
+  demos:
+    output: true
+    permalink: "/demos/:slug.html"
+  updates:
+    output: true
+    permalink: "/updates/:slug.html"
+
 defaults:
   - scope:
-      path: "assets/img"
+      path: "assets/images"
     values:
       image: true
   - scope:
@@ -64,6 +73,18 @@ defaults:
     values:
       layout: "page"
       site_page: false
+  - scope:
+      path: "demos"
+      type: "demos"
+    values:
+      layout: "demo"
+      style: "demos"
+  - scope:
+      path: "updates"
+      type: "updates"
+    values:
+      layout: "updates"
+      style: "updates"
 #  - scope:
 #      path: ""          # Set layout for all posts
 #      type: "posts"
