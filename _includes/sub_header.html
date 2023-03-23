@@ -1,0 +1,11 @@
+<div id="subHeaderWrapper">
+    <div id="subHeader">
+        <div class="link" id="sd" rel="{{ "/" | relative_url }}" title="s33N10r"></div>
+        {% if page.is_index %}
+        <div id="title" title="{{ include.title }}" alt="{{ include.title }}"></div>
+        {% else %}
+        {{index_url}}
+        <a href="{{ include.index_url | relative_url }}"><div id="title" title="{{ include.title }}" alt="{{ include.title }}"></div></a>
+        {% endif %}
+    </div>
+</div>

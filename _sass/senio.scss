@@ -94,9 +94,6 @@ body {
     border-style: inset;
     border-width: 1px;   
   } 
-	&#gfx {
-		background-image: url(images/sad_back3.jpg);
-	}
 	&#features {
 		background-image: url(images/features/feat_back.jpg);
 	}
@@ -215,12 +212,6 @@ body {
       #demos & {
         background-image: url(images/demos.gif);
       }
-      #gfx & {
-        background-image: url(images/gfx.gif);
-      }
-      #choons & {
-        background-image: url(images/choons.gif);
-      }
       #knut & {
         top: (150px - 107px) /2;
         background-image: url(images/features/knut/logo.jpg);
@@ -318,35 +309,6 @@ body {
 	width: 35%;
 }
 
-#choons {
-  ul.musiclist {
-    list-style: none;
-    li {
-        background: {
-          position: top left;
-          repeat: no-repeat;
-        }
-        padding-left: 40px;
-        padding-bottom: 15px;
-        &.musicitem {
-          background-image: url(images/disk.gif);
-        }
-        &.mono {
-          background-image: url(images/disk.gif);
-        }
-    }
-    .title {
-      font-weight: bold;
-      font-size: larger;
-    }
-    .info {
-        a {
-          font-weight: bold;
-        }
-    }
-  }
-}
-
 #netbest {
   h2, h3 {
     color: #ffff80;
@@ -378,3 +340,5 @@ body {
 @import "page/crew.scss";
 @import "page/demos.scss";
 @import "page/updates.scss";
+@import "page/music.scss";
+@import "page/gfx.scss";

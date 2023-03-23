@@ -1,3 +1,37 @@
 ---
-layout: coming_soon
+layout: music
+style: choonz
+description: "You are obviously a sensible person of refined tastes and values, because you have arrived at the hub of sound creation itself! DAME VERA LYNN of the SENIOR DADS!"
+keywords: Senior, Dads, demo, scene, demoscene, Atari, excellent, brilliant, elite, music, zik, zax, muzzax, chill, techno, modules, soundtracker, badass, yo, dame, vera, lynn, in, da, haass
+title: "The greatest music composer in the history of space/time!"
+author: "Dame Vera Lynn. Of the SD!!!"
+is_index: true
 ---
+<h1 align="center"><span class="blink">o</span>r<span class="blink">.</span>.</h1>
+<h1 align="center">The SENIOR DADS <font color="#FF00FF">J</font><font color="#0000FF">U</font><font color="#80FFFF">K</font><font color="#00FF00">E</font>B<font color="#FF8000">O</font><font color="#FF0000">X</font><font color="#BA5401">!</font>
+</h1>
+<p><img src="{{ "/assets/images/damevera.jpg" | relative_url }}" height="72" width="144" align="RIGHT"> You are obviously a sensible person of
+    refined tastes and values, because you have arrived at the hub of sound creation itself! Yes, c'est moi,
+    <strong>Dame Vera Lynn</strong>, cranking out da wicked badboy chunes from the killer wheelz o' steel. Well,
+    actually, it's with the benefit of those mighty soundtrakka programs <strong>Protracker</strong> and
+    <strong>Xbios Music Maker</strong>, but that's my metaphorical wheelz o' steel on the Atari, so fuck dat shit
+    forra laff!
+</p>
+<h3>Enough of the bull, <span class="blink">daddio,</span> give us tha hardcore beatz!!</h3>
+<p>Okey-dokey- hit it maestro!</p>
+<ul class="musiclist">
+    {% assign music = site.data.music | sort: 'order' %}
+    {% for item in music %}
+        {% if item.active %}
+            {% capture file_url %}/filez/music/{{ item.file }}{% endcapture %}
+            <li class="musicitem{% if item.mono %} mono{% endif %}">
+                <div class="title"><a name="{{ item.name }}"></a><a href="{{ file_url | relative_url }}">{{ item.title }}</a></div>
+                <div class="info">{{ item.description }}</div>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<h3>Is that all, Mr Music Man?</h3>
+<p>Quality, not quantity, that's my motto!</p>
+<p>Peace.</p>
+<p><strong><em>Dame VL</em></strong></p>

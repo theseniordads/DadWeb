@@ -9,6 +9,6 @@ This website is under (re)construction!!! And it's not finished yet!!!!! So we'r
 
 ## What we have done
 
-* Crew section
-* A couple of bits in the Demos section.
+* [Crew section](../crew/)
+* A couple of bits in the [Demos section](../demos/).
 * Placeholder pages for the rest of the site, wot say "Comming SOON!!!!!!"

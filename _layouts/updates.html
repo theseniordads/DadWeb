@@ -4,14 +4,5 @@ style: updates
 title: "s33N10r uPdAt3Z!"
 ---
 {% include last_updated.html %}
-<div id="subHeaderWrapper">
-    <div id="subHeader">
-        <div class="link" id="sd" rel="{{ "/" | relative_url }}" title="s33N10r"></div>
-        {% if page.is_index %}
-        <div id="title" title="uPdAt3Z!" alt="uPdAt3Z!"></div>
-        {% else %}
-        <a href="{{ "/updates/" | relative_url }}"><div id="title" title="uPdAt3Z!" alt="uPdAt3Z!"></div></a>
-        {% endif %}
-    </div>
-</div>
+{% include sub_header.html title='uPdAt3Z!' index_url='/updates/' %}
 {{ content }}
