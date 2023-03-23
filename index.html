@@ -38,10 +38,10 @@ keywords: Senior, Dads, demo, crew, computer, multimedia, Atari, Falcon, brillia
 	<p>
 	<div class="counter" rel="8"></div>
 	</p>
-	<p><a href="/updates/"><img src="{{ "/assets/images/updates.png" | relative_url }}" /></a></p>
+	<p><a href={{ "/updates/" | relative_url }}><img src="{{ "/assets/images/updates.png" | relative_url }}" /></a></p>
 	{% assign latest_update = site.updates | sort: 'date' | reverse | first %}
 	{% assign latest_update_date = latest_update.date | date: "%d %B %Y" %}
-	<p><a href="/updates/"><b>({{ latest_update_date }}) {{ latest_update.title}}</b></a>
+	<p><a href="{{ latest_update.url | relative_url }}"><b>({{ latest_update_date }}) {{ latest_update.title}}</b></a>
 		<br>
 	<hr>
 	</p>
