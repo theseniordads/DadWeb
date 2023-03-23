@@ -1,0 +1,19 @@
+body#updates {
+  #subHeader {
+    #title {
+      background-image: url(images/updates.png);
+    }
+  }
+  ul.post-list {
+    list-style: none;
+    li {
+        padding-left: calc(175px + 1em);
+        background: {
+            image: url(images/updates.png);
+            size: 175px 75px;
+            position: top left;
+            repeat: no-repeat;
+        }
+    }
+  }
+}
