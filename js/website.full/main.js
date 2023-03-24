@@ -4,6 +4,12 @@ $(document).ready( function() {
 	visitorCounter();
 	leetSpeak();
 	headers();
+	$('a').each( function() {
+		var href = $(this).attr("href");
+		if (href.startsWith("http://") || href.startsWith("https://")) {
+			element.attr("target","_blank");
+		}
+	});
 	//FAQify();
 	
 	// Old school blinking!

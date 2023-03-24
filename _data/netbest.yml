@@ -1,0 +1,100 @@
+- name: hotwired_rgb
+  title: Hotwired RGB Gallery
+  url: https://web.archive.org/web/20000303053038/http://hotwired.lycos.com/rgb/
+  description: We must be really visonary, because this is a section devoted to people who do the sort of stuff we do in our <a href="../../demos/default.html">demos</a>!!
+  created_at: 2019-06-18 11:02:21.729703
+  updated_at: 2019-06-18 11:02:21.729703
+  public: true
+- name: kitchenette
+  title: Kitchenette Magazine!
+  url: https://web.archive.org/web/20000304074436/http://www.kitchenette.com/index.html
+  description: Our mouths were watering after visiting this site!
+  created_at: 2019-06-18 11:02:21.739827
+  updated_at: 2019-06-18 11:02:21.739827
+  public: true
+- name: whisky_tasting
+  title: Whisky tasting notes
+  url: https://web.archive.org/web/20001206144000/https://www.dcs.ed.ac.uk/home/jhb/whisky/padlip.html
+  description: 'I never knew whisky tasting was so interesting! Though I don''t spit it out after tasting!!!!!'
+  created_at: 2019-06-18 11:02:21.749861
+  updated_at: 2019-06-18 11:02:21.749861
+  public: true
+- name: irnbru_sausage
+  title: Internet Irn Bru and Sliced Sausage machine!
+  url: https://web.archive.org/web/20000520000806/http://www.icbl.hw.ac.uk:80/~william/irnintro.html
+  description: 'If you thought Coke machines on the WebNet were originall then check this out! This machine actually dispenses Irn Bru and suasages. Shame we can''t get to eat them! (The sausages, we mean!!! It would silly to try and eat Irn Bru cans, wouldn''t it!!!!)'
+  category_id: 2
+  public: true
+  created_at: 2019-06-18 11:02:21.758824
+  updated_at: 2019-06-18 11:02:21.758824
+- name: irnbru
+  title: Official Irn Bru Web Site
+  url: https://web.archive.org/web/19971015233208/http://www.irn-bru.co.uk/comein.htm
+  description: Talking of the famous Scottish soft-drink, check out their visionary web opus! We almost felt like giving up when we saw how brilliant it was!
+  public: true
+  created_at: 2019-06-18 11:02:21.769194
+  updated_at: 2019-06-18 11:02:21.769194
+- name: cheesemaking
+  title: Cheesemaking in Scotland
+  url: https://www.goodreads.com/book/show/4891884-cheesemaking-in-scotland
+  description: Well, as they say, "blessed are the cheesemakers", and this is a really interesting read!
+  created_at: 2019-06-18 11:02:21.782195
+  updated_at: 2019-06-18 11:02:21.782195
+  public: true
+- name: biff
+  title: B1FF#S K3WL H0M3 PAG3!!!
+  url: https://web.archive.org/web/19970217191822/http://www.panix.com/~clays/biff/
+  description: This guy was a major influence on us! Look here and see why- he knows how to web-design! Also, check out his <a href="http://web.archive.org/web/20010515101823/http://shell.rmi.net/~tph/biffsig.html">signature</a> for tips on how to end your messages on Presetel!!
+  public: true
+  created_at: 2019-06-18 11:02:21.792229
+  updated_at: 2019-06-18 11:02:21.792229
+- name: tain
+  title: Tain Through Time
+  url: https://web.archive.org/web/19990220064248/http://www.cali.co.uk/HIGHEXP/TTT/
+  description: 'CLASS. This is an online museum about a Scottish town called Tain! It''s really educational and after reading this site, you want to go there and experience it''s history!'
+  public: true
+  created_at: 2019-06-18 11:02:21.802227
+  updated_at: 2019-06-18 11:02:21.802227
+- name: team_gates
+  title: Team Gates
+  url: http://www.teamgates.com/
+  description: Read more about the amazing Mr William Gates III, and his fans. If you want to know how &quot;way too cool&quot; the future of programming is going to be read here!
+  public: true
+  created_at: 2019-06-18 11:02:21.812228
+  updated_at: 2019-06-18 11:02:21.812228
+- name: biggar_net
+  title: Biggar Net
+  url: https://web.archive.org/web/19970603221929/http://www.biggar-net.co.uk/index.htm
+  description: If you thought all this talk about &quot;global village&quot; was a load of rubbish, check this out! This is a shining example of a small village in Scotland wired up to the global intranet superinfo highway pipe and beating the big boys at their own game!
+  public: true
+  created_at: 2019-06-18 11:02:21.822230
+  updated_at: 2019-06-18 11:02:21.822230
+- name: cruel_site
+  title: Cruel Site of the Day
+  url: https://web.archive.org/web/19980501112023/http://cruel.com/
+  description: 'A really thought-provoking site, detailing communication problems in a corrupt Western society. If you''re an intellictual, check this one out!'
+  public: true
+  created_at: 2019-06-18 11:02:21.832593
+  updated_at: 2019-06-18 11:02:21.832593
+- name: grampian_transport
+  title: Grampian Transport Museum
+  url: https://web.archive.org/web/19980125141310/http://www.cw.globalweb.co.uk/alford/gtm.htm
+  description: Wow! Who knew transport in the north of Scotland could be so interesting!!!! Also, check out the radical design of this site, which uses color opposites to make the text easier on the eyes!
+  public: true
+  created_at: 2019-06-18 11:02:21.842627
+  updated_at: 2019-06-18 11:02:21.842627
+- name: tocs
+  title: T.O.C.S
+  url: http://dspace.dial.pipex.com/town/plaza/lh48/
+  description: No wonder this company is &quot;well established&quot;! Wait till you see the quality of their site!!!
+  public: false
+  created_at: 2019-06-18 11:02:21.852616
+  updated_at: 2019-06-18 11:02:21.852616
+- name: calico_links
+  title: Links page on Calico
+  url: https://web.archive.org/web/19980222082141/http://www.cali.co.uk/links/
+  description: Some wisdom from the professionals. These guys design web pages for a living. Check out how their brilliance!!!
+  category_id: 2
+  public: true
+  created_at: 2019-06-18 11:02:21.864315
+  updated_at: 2019-06-18 11:02:21.864315

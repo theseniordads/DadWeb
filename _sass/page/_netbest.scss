@@ -1,0 +1,47 @@
+body#netbest {
+    @extend body, #features;
+
+    color: white;
+
+    background: {
+        color: black;
+        image: url(images/features/netbest/netbest_back.jpg);
+    }
+
+    @include linkCol(#00ffff, #ff80ff, #ffff80, white);
+
+    h2,
+    h3 {
+        color: #ffff80;
+    }
+
+    ul#listings {
+        list-style: none;
+
+        li {
+            display: flex;
+            min-height: 92px;
+            margin-bottom: 1em;
+            background: {
+                image: url(images/features/netbest/netbest_mini.gif);
+                position: top left;
+                repeat: no-repeat;
+            }
+
+            padding-left: 80px;
+            padding-bottom: 15px;
+        }
+
+        .title {
+            flex: 1;
+            display: block;
+            float: left;
+            font: {
+                size: x-large;
+                weight: bold;
+            }
+        }
+        .info { flex: 2; }
+    }
+
+}

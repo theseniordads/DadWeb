@@ -1,0 +1,55 @@
+body#features {
+    background-image: url(images/features/feat_back.jpg);
+
+    #subHeader {
+        #title {
+            width: 350px;
+            height: 150px;
+            background-image: url(images/dox.gif);
+        }
+    }
+
+    #doxListContainer {
+        width: 100%;
+        display: block;
+
+        #doxList {
+            width: 60%;
+
+            margin: {
+                left: auto;
+                right: auto;
+            }
+
+            .item {
+                display: flex;
+
+                .logo,
+                .text {
+                    flex: 1;
+                    margin: {
+                        right: 10px;
+                        bottom: 10px;
+                    }
+                }
+
+                .logo {
+                    text-align: center;
+                }
+
+                .text {
+                    font: {
+                        size: xx-large;
+                        weight: bold;
+                    }
+                    .urlLastUpdated {
+                        font: {
+                            size: small;
+                            weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

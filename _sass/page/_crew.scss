@@ -1,6 +1,12 @@
 body#crew {
   background-image: url(images/sad_bak2.gif);
 
+  #subHeader {
+    #title {
+      background-image: url(images/dudes.gif);
+    }
+  }
+
   table#dudes {
     display: table;
     border-collapse: separate;
@@ -110,7 +116,7 @@ body#crew {
               text-align: center;
             }
 
-            .oldname {
+            .newname {
               text-align: left;
             }
           }

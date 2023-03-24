@@ -1,0 +1,39 @@
+---
+layout: features
+style: netbest
+title: NetBest!
+---
+    <div align="center">
+        <p><img alt="NetBest!" height="220" src="{{ "/assets/images/features/netbest/netbest_logo.gif" | relative_url }}" title="NetBest!"
+                width="329"></p>
+    </div>
+    <h1 align="center">tHa <span class="blink">b3St</span> 0n tHa w3 bR0uGhT 2 yA bY:</h1>
+    <p align="center"><a href="{{ "/" | relative_url }}"><img
+            alt="s3N10r dAdS!!1!!1!" height="100" src="{{ "/assets/images/senior2.gif" | reltive_url }}" title="s3N10r dAdS!!1!!1!"
+            width="200">&lt;</a></p>
+    <p style="font-size: larger;">Throw away your bookmarks, this is all you need!</p>
+    <p></p>
+    <hr>
+    <p></p>
+    <h3>What is <span class="blink">NET</span>BEST?!?!</h3>
+    <p>Quite simply, <em>the best <strong>Senior Sites</strong> on the Internet!!!</em></p>
+    <p>We've been looking thorugh the web stratosphere for some time now, and occasionally,we come across some
+        <strong>stunning</strong> web sites- some to even rival our own unique web style!! So we thought- why not pay
+        tribute to the unsung heroes of the net!??!?</p>
+    <p>Hold your seatbelts- let's go!</p>
+    <ul><strong><a href="{{ "/crew/index.html#Old_Fart" | relative_url }}">Old Fart</a></strong></ul>
+    <h2>s3R1aL k1LlAh s1T3s!!!111!!!1</h2>
+    <p>Here are just a few sites we saw ourselves whilst surfing in the saddle of the Internet!</p>
+    <h4><strong>New sites added!!! (27/10/97)!</strong></h4>
+    <p><em>(Err, some of the links might not work todday!!!! But the <a href="http://web.archive.org">Wayback Machine</a> was able to save most of them!)</em></p>
+    <ul id="listings">
+        {% for website in site.data.netbest %}
+            {% if website.public %}
+                <li>
+                    <div class="title"><a href="{{ website.url }}">{{ website.title }}</a></div>
+                    <div class="info">{{ website.description }}</div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>

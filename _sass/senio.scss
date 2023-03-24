@@ -94,9 +94,6 @@ body {
     border-style: inset;
     border-width: 1px;   
   } 
-	&#features {
-		background-image: url(images/features/feat_back.jpg);
-	}
   &#knut {
     font: {
       face: Comic Sans MS, sans-serif;
@@ -108,14 +105,7 @@ body {
     } 
     @include linkCol( #FFFF00, #FFFF80, #00FF40, white );
   }
-	&#netbest {
-		color: white;
-		background: {
-			color: black;
-			image: url(images/features/netbest/netbest_back.jpg);
-		} 
-		@include linkCol( #00ffff, #ff80ff, #ffff80, white );
-	}
+
   &#presstrail {
     color: black;
     background: {
@@ -206,12 +196,6 @@ body {
         repeat: no-repeat;
         position: center;
       }
-      #crew & {
-        background-image: url(images/dudes.gif);
-      }
-      #demos & {
-        background-image: url(images/demos.gif);
-      }
       #knut & {
         top: (150px - 107px) /2;
         background-image: url(images/features/knut/logo.jpg);
@@ -230,43 +214,6 @@ body {
       }
       #MonoMental & {
         background-image: url(images/demos/mono/demos.gif);
-      }
-      #features &, #dox & {
-        width: 350px;
-        height: 150px;
-        background-image: url(images/dox.gif);
-      }
-    }
-  }
-}
-
-#features{
-  #doxListContainer {
-    width: 100%;
-    display: block;
-    #doxList {
-      width: 60%;
-      margin: {
-        left: auto;
-        right: auto;
-      }
-      .item {
-        .logo, .text {
-          width: 50%;
-          margin: {
-            right: 10px;
-            bottom: 10px;
-          }
-          .logo {
-            text-align: center;
-          }
-          .text {
-            font: {
-              size: x-large;
-              weight: bold;
-            }
-          }
-        }
       }
     }
   }
@@ -309,36 +256,11 @@ body {
 	width: 35%;
 }
 
-#netbest {
-  h2, h3 {
-    color: #ffff80;
-  }
-  ul#listings {
-    list-style: none;
-    li {
-      background: {
-        image: url(images/disk.gif);
-        position: top left;
-        repeat: no-repeat;
-      }
-      padding-left: 80px;
-      padding-bottom: 15px;
-    }
-    .title {
-      font-weight: bold;
-      width: 50%;
-      height: 100%;
-      display: block;
-      float: left;
-    }
-    .info {
-    }
-  }
-}
-
 @import "page/index.scss";
 @import "page/crew.scss";
 @import "page/demos.scss";
 @import "page/updates.scss";
 @import "page/music.scss";
 @import "page/gfx.scss";
+@import "page/features.scss";
+@import "page/netbest.scss";

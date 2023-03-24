@@ -1,33 +1,39 @@
 body#index {
-    header {
-        text-align: center;
-    }
-    #homeMenu {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        .menuItem {
-          height: 151px;
-          position: relative;
-          .icon {
-            @include position( 0px, 0px );
-            width: 350px;
-            height: 150px;
-            img {
-              width: 350px;
-              height: 150px;
-              cursor: pointer;
-            }
-          }
-          .text {
-            @include position( 350px, 0px );
-            text-align: left;
-            margin: {
-              bottom: auto;
-              top: auto;
-            }
-          }
+  header {
+    text-align: center;
+  }
+
+  #homeMenu {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    .menuItem {
+      height: 151px;
+      position: relative;
+
+      .icon {
+        @include position(0px, 0px);
+        width: 350px;
+        height: 150px;
+
+        img {
+          width: 350px;
+          height: 150px;
+          cursor: pointer;
         }
       }
+
+      .text {
+        @include position(350px, 0px);
+        text-align: left;
+
+        margin: {
+          bottom: auto;
+          top: auto;
+        }
+      }
+    }
+  }
 }
