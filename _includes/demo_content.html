@@ -3,7 +3,10 @@
     <div class="container">
         <div class="stats">
             <div class="header">{{ page.title }}</div>
-            <div class="platform">{{ page.platform }}</div>
+            <div class="platform">{% for platform_entry in page.platform %}{{ platform_entry }} 
+                {% if forloop.last == false %} / {% endif %}
+                {% endfor %}
+                 0nLy!!!1!</div>
             <div class="released">Released: {{ page.released }}!!!!</div>
             <div class="downloads">
                 {% capture local_file %}/filez/demos/{{ page.local_file}}{% endcapture %}
@@ -37,38 +40,104 @@
 <div id="description">
 {{ description }}
 </div>
+
 {% if page.credits %}
 <div id="creditsWrapper">
-    <div id="credits">
+    {% if page.credits.expanded %}
+    <div id="creditsExpanded">
         {% if page.credits.header %}
-        <div class="header">{{page.credits.header}}</div>
+            <div class="header">{{page.credits.header}}</div>
         {% endif %}
         {% for credit in page.credits.credit_list %}
-        <div class="credit">
-            <div class="deed">{{credit.deed}}</div>
-            <div class="by">
-            {% for being in credit.by %}
-                {% if being.person %}
-                    {% assign crew_member = site.data.crew[being.person] %}
-                    {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
-                    {% if being.person_text %}
-                        {% assign credit_text = being.person_text | replace : "%crew_member_name%", crew_member_link %}
+            <div class="credit">
+                <div class="deed">{{ credit.deed }}{% if credit.deed != "" %}:{% endif %}</div>
+                <div class="detail">
+                    <ul>
+                        {% for detail in credit.detail %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="by{% if page.credits.by_list %} list{% endif %}">
+                    {% if page.credits.by_list %}<ul>{% endif %}
+                    {% if credit.by_text %}
+                        {% assign credit_text = credit.by_text %}
+                        {% for being in credit.by %}
+                            {% if page.credits.by_list %}<li>{% endif %}
+                            {% if being.person %}
+                                {% assign crew_member = site.data.crew[being.person] %}
+                                {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% capture crew_name_replace %}%crew_member_name{% if forloop.index > 1 %}{{ forloop.index }}{% endif %}%{% endcapture %}
+                                {% assign credit_text = credit_text | replace : crew_name_replace, crew_member_link %}
+                            {% endif %}
+                            {% if page.credits.by_list %}</li>{% endif %}
+                        {% endfor %}
+                        {{ credit_text }}
                     {% else %}
-                        {% assign credit_text = crew_member_link %}
+                        {% for being in credit.by %}
+                            {% if page.credits.by_list %}<li>{% endif %}
+                            {% if being.person %}
+                                {% assign crew_member = site.data.crew[being.person] %}
+                                {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% if being.person_text %}
+                                    {% assign credit_text = being.person_text | replace : "%crew_member_name%", crew_member_link %}
+                                {% else %}
+                                    {% assign credit_text = crew_member_link %}
+                                {% endif %}
+                                {{ credit_text }}
+                            {% else %}
+                                {{ being.person_text }}
+                            {% endif %}
+                            {% if forloop.last == false and page.credits.by_list != true %}
+                            <br />
+                            {% endif %}
+                            {% if page.credits.by_list %}</li>{% endif %}
+                        {% endfor %}
                     {% endif %}
-                    {{ credit_text }}
-                {% else %}
-                    {{ being.person_text }}
-                {% endif %}
-                {% if forloop.last == false %}
-                    <br/>
-                {% endif %}
-            {% endfor %}
+                </div>
+                {% if page.credits.by_list %}</ul>{% endif %}
             </div>
-        </div>
         {% endfor %}
     </div>
+    {% else %}
+        <div id="credits">
+            {% if page.credits.header %}
+                <div class="header">{{page.credits.header}}</div>
+            {% endif %}
+            {% for credit in page.credits.credit_list %}
+                <div class="credit">
+                    <div class="deed">{{credit.deed}}</div>
+                    <div class="by{% if page.credits.by_list %} list{% endif %}">
+                        {% if page.credits.by_list %}<ul>{% endif %}
+                        {% for being in credit.by %}
+                            {% if page.credits.by_list %}<li>{% endif %}
+                            {% if being.person %}
+                                {% assign crew_member = site.data.crew[being.person] %}
+                                {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% if being.person_text %}
+                                    {% assign credit_text = being.person_text | replace : "%crew_member_name%", crew_member_link %}
+                                {% else %}
+                                    {% assign credit_text = crew_member_link %}
+                                {% endif %}
+                                {{ credit_text }}
+                            {% else %}
+                                {{ being.person_text }}
+                            {% endif %}
+                            {% if forloop.last == false and page.credits.by_list != true %}
+                                <br/>
+                            {% endif %}
+                            {% if page.credits.by_list %}</li>{% endif %}
+                        {% endfor %}
+                        {% if page.credits.by_list %}</ul>{% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
+{% endif %}
+{% if post_credits %}
+{{ post_credits }}
 {% endif %}
 {% if saggie %}
 <p></p>

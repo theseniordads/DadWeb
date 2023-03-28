@@ -96,21 +96,29 @@ body#demos {
           font-weight: bold;
           .deed, .by {
             padding: 4px;
+            flex: 1;
           }
           .by {
             font-style: italic;
             text-align: right;
+            flex: 2;
+          }
+          .by.list {
+            text-align: left;
           }
         }
       }
 
       #creditsExpanded {
         width: 80%;
-        .deed, .by {
-          width: 30%;
+        .deed {
+          flex: 1;
+        }
+        .by {
+          flex: 2;
         }
         .detail {
-          width: 30%;
+          flex: 4;
         }
       }
     }

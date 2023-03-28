@@ -1,10 +1,9 @@
 <div id="subHeaderWrapper">
     <div id="subHeader">
         <a  href="{{ "/" | relative_url }}"><div id="sd" title="s33N10r"></div></a>
-        {% if page.is_index %}
+        {% if page.is_index and include.force_url!=true %}
         <div id="title" title="{{ include.title }}" alt="{{ include.title }}"></div>
         {% else %}
-        {{index_url}}
         <a href="{{ include.index_url | relative_url }}"><div id="title" title="{{ include.title }}" alt="{{ include.title }}"></div></a>
         {% endif %}
     </div>

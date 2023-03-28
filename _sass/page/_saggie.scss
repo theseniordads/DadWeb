@@ -1,0 +1,34 @@
+body#saggie {
+    pre {
+        color: var(--main-text-col) !important;
+    }
+    background: {
+        color: #FBF8F4;
+        image: url(images/features/saggie/saggie_back.gif);
+    }
+
+    #subHeaderWrapper {
+        #subHeader {
+            width: 80px + 170px;
+
+            #title {
+                background: {
+                    image: url(images/features/saggie/saggie_mini.gif);
+                    position: left top;
+                }
+
+                width: 170px;
+                top: (150px - 107px)/2;
+            }
+        }
+    }
+    .index #subHeaderWrapper {
+        #subHeader {
+            #title {
+                width: 350px;
+                height: 150px;
+                background-image: url(images/dox.gif);
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+---
+layout: base
+style: saggie
+---
+{% include last_updated.html %}
+{% if page.is_index %}
+<div class="index">
+{% include sub_header.html title='d0XX11!!1!' index_url='/features/' force_url=true %}
+</div>
+{% else %}
+{% include sub_header.html title='sAgG13!!!11!' index_url='/features/saggie/' %}
+{% endif %}
+{{ content }}

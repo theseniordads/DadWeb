@@ -6,8 +6,10 @@
   --yellow: #FFFF00;
   --grass-green: #77ff00;
   --grey: #808080;
+  --black: #000000;
 
   --main-text-col: var(--yellow);
+  --main-text_shadow-col: var(--black);
 }
 
 @mixin linkCol($link, $visited, $hover, $active) {
@@ -35,6 +37,7 @@
 
 @mixin mainTextStyle {
 	color: var(--main-text-col);
+  text-shadow: 0 0 4px var(--main-text_shadow-col);
 	font: {
 		family : Times New Roman, Times, Garamond, serif;
 		size: 14px;
@@ -114,12 +117,6 @@ body {
     } 
     @include linkCol( #0000FF, #800080, #FF00FF, white );
   }
-  &#saggie {
-    background: {
-      color: #FBF8F4;
-      image: url(images/features/saggie/saggie_back.gif);
-    } 
-  }
   
   
   .lastUpdated, .urlLastUpdated {
@@ -165,12 +162,6 @@ body {
     width: 80px + 350px;
     height: 150px;
     margin-bottom: 20px;
-    #saggie & {
-      width: 80px + 170px;
-    }
-    #saggie #dox & {
-      width: 80px + 350px;
-    }
     #presstrail & {
         height: 200px;
     }    
@@ -203,14 +194,6 @@ body {
       #presstrail & {
         background-image: url(images/features/presstrail/ptrail_main.gif);
         height: 200px;
-      }
-      #saggie & {
-        background: {
-          image: url(images/features/saggie/saggie_mini.gif);
-          position: left top;
-        }
-        width: 170px;
-        top: (150px - 107px)/2;
       }
       #MonoMental & {
         background-image: url(images/demos/mono/demos.gif);
@@ -264,3 +247,4 @@ body {
 @import "page/gfx.scss";
 @import "page/features.scss";
 @import "page/netbest.scss";
+@import "page/saggie.scss";
