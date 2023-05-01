@@ -1,6 +1,6 @@
 # Executes a full build, and runs dev server.
 # To use, configure for the location of your project, and then copy into C:\Windows\System32
 
-cd "F:\Users\MichaelJames\git\DadWeb\scripts\windows" # <-- Replace with the location of your project.
+cd "F:\Users\MichaelJames\git\seniordads\DadWeb\scripts\windows" # <-- Replace with the location of your project.
 .\build.ps1
 .\runserver_dev.ps1

@@ -1,0 +1,119 @@
+body#knut {
+    font: {
+      family: "Comic Sans MS", "Comic Sans", cursive;
+    }
+    color: white;
+    background: {
+      color: #003300;
+      image: url(images/features/knut/backg.jpg);
+    } 
+    @include linkCol( #FFFF00, #FFFF80, #00FF40, white );
+
+    #subHeader {
+        #title {
+            top: (150px - 107px) /2;
+            background-image: url(images/features/knut/logo.jpg);
+        }
+    }
+
+    h2, h3 {
+        font: {
+        size: 1.25em;
+        weight: bold;
+        }
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        color: #DBFFA4;
+    }
+
+    #blurb, .episode, .step {
+        display: flex;
+        justify-content: space-between;
+
+        header {
+            text-align: center;
+            margin-right: 1em;
+
+            img {
+                width: 298px;
+                height: 150px;
+            }
+        }
+
+        div {
+            background-color: #000000;
+            color: #99FF99;
+            b {
+                color: #DBFFA4;
+            }
+            strong {
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .episode {
+        header {
+            text-align: left;
+            font: {
+                weight: bold;
+                size: 1.25em;
+            }
+        }
+        footer {
+            color: #FFFFFF;
+            strong {
+                font-size: 1.25em;
+            }
+        }
+    }
+    .step {
+        justify-content: start;
+        header {
+            background-color: #003300;
+            img {
+                width: 150px;
+                height: 43px;
+                margin: 0.45em;
+            }
+        }
+        div {
+            background: none;
+            text-align: left;
+            h3, h4 {
+                font-size: 1rem;
+            }
+            h4 {
+                color: #FFFFFF;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #logo-heading {
+        text-align: center;
+        h1, h2 {
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 1.75rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+    .index #subHeaderWrapper {
+        #subHeader {
+            #title {
+                width: 350px;
+                height: 150px;
+                background-image: url(images/dox.gif);
+            }
+        }
+    }
+}

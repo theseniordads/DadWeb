@@ -97,17 +97,6 @@ body {
     border-style: inset;
     border-width: 1px;   
   } 
-  &#knut {
-    font: {
-      face: Comic Sans MS, sans-serif;
-    }
-    color: white;
-    background: {
-      color: #003300;
-      image: url(images/features/knut/backg.jpg);
-    } 
-    @include linkCol( #FFFF00, #FFFF80, #00FF40, white );
-  }
 
   &#presstrail {
     color: black;
@@ -187,10 +176,6 @@ body {
         repeat: no-repeat;
         position: center;
       }
-      #knut & {
-        top: (150px - 107px) /2;
-        background-image: url(images/features/knut/logo.jpg);
-      }
       #presstrail & {
         background-image: url(images/features/presstrail/ptrail_main.gif);
         height: 200px;
@@ -248,3 +233,4 @@ body {
 @import "page/features.scss";
 @import "page/netbest.scss";
 @import "page/saggie.scss";
+@import "page/knut.scss";
