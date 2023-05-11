@@ -16,6 +16,10 @@ body#knut {
         }
     }
 
+    .index #subHeaderWrapper #subHeader #title {
+        @extend .features-title;
+    }
+
     h2, h3 {
         font: {
         size: 1.25em;
@@ -105,15 +109,6 @@ body#knut {
         }
         h2 {
             font-size: 1rem;
-        }
-    }
-    .index #subHeaderWrapper {
-        #subHeader {
-            #title {
-                width: 350px;
-                height: 150px;
-                background-image: url(images/dox.gif);
-            }
         }
     }
 }

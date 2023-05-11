@@ -30,7 +30,7 @@ title: NetBest!
         {% for website in site.data.netbest %}
             {% if website.public %}
                 <li>
-                    <div class="title"><a href="{{ website.url }}">{{ website.title }}</a></div>
+                    <div class="title"><a href="{{ website.url }}" target="_blank">{{ website.title }}</a></div>
                     <div class="info">{{ website.description }}</div>
                 </li>
             {% endif %}

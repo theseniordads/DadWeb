@@ -1,0 +1,193 @@
+body#presstrail {
+    color: black;
+    text-shadow: none;
+    background: {
+      color: #FFFFC0;
+      image: url(images/features/presstrail/ptrail_bkg.gif);
+    } 
+    @include linkCol( #0000FF, #800080, #FF00FF, white );
+
+    #subHeaderWrapper {
+        #subHeader {
+            height: 200px;
+            #title {
+                height: 200px;
+                background-image: url(images/features/presstrail/ptrail_main.gif);
+            }    
+        }
+    }
+    .index #subHeaderWrapper #subHeader #title {
+        @extend .features-title;
+    }
+
+    section#magazine {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        article {
+            width: calc(50% - 1em);
+            background-color:  var(--white);
+            padding: 1em;
+            margin-right: 1em;
+            margin-bottom: 1em;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            h1, h2 {
+                font: {
+                    family: "Impact", "Arial Black", sans-serif;
+                    weight: bold;
+                }
+            }
+            h1 {
+                font-size: 2em;
+            }
+
+            &.cover {
+                display: flex;
+                justify-content: center;
+                background: none;
+            }
+            &.intro {
+                blockquote {
+                    font-weight: bold;
+                    font-style: italic;
+                    margin-left: 2em;
+                }
+            }
+            &.where-you-read-us {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-size: 1.5em;
+                    font-style: italic;
+                    font-weight: normal;
+                }
+            }
+            &.saggie {
+                background-color: #CCCCFF;
+            }
+            &.atari-computing {
+                background-color: #CCFFEE;
+                section {
+                    flex-grow: 2;
+                }
+            }
+            &.undercover {
+                background-color: #EEEEEE;
+                text-align: center;
+            }
+            &.atariphile {
+                background-color: #000099;
+                width: 100%;
+                margin-right: 0;
+                section {
+                    background-color: var(--white);
+                    padding: 1em;
+                    flex-grow: 3;
+                }
+            }
+
+            &.saggie, &.atari-computing, &.atariphile {
+                display: flex;
+                justify-content: space-between;
+
+                section {
+                    ul {
+                        font-family: "Arial Black", Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+        }
+    }
+
+    article.coverage {
+        display: flex;
+        justify-content:end;
+        flex-wrap: wrap;
+
+        section {
+            background-color: var(--white);
+            margin-bottom: 1em;
+            font-size: 1.15em;
+            padding: 1em;
+
+            & p.intro::first-letter
+            {
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+
+        section.introduction {
+            width: 100%;
+            background-color: #FAFFD7;
+        }
+
+        section.clipping {
+            background: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        section.text {
+            p.url {
+                font-family: "courier new", courier, monospace;
+            }
+            p.blurb {
+                font-family: "Arial Black", Arial, sans-serif;
+                font-size: 0.75em;
+            }
+
+            h1 {
+                font: {
+                    family: "Impact", "Arial Black", sans-serif;
+                    weight: bold;
+                }
+            }
+        }
+
+        section.clipping, section.text {
+            width: calc(50% - 1em);
+        }
+
+        section.more {
+            @extend .more;
+            width: calc(50% - 1em);
+            background-color: #000099;
+            background-repeat: no-repeat;
+            background-position: right;
+            margin-right: 0;
+            margin-top: 0;
+            padding: 0;
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                .more {
+                    margin: 0;
+                    top: -1em;
+                }
+            }
+        }
+        &.frted {
+            justify-content: space-between;
+            section.text {
+                width: calc(100% - (1em + 190px));
+            }
+            section.clipping {
+                background-color: #000099;
+                width: 190px;
+                margin-right: 1em;
+            }
+        }
+    }
+
+}

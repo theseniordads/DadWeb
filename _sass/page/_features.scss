@@ -1,11 +1,15 @@
+.features-title {
+    width: 350px;
+    height: 150px;
+    background-image: url(images/dox.gif);
+}
+
 body#features {
     background-image: url(images/features/feat_back.jpg);
 
     #subHeader {
         #title {
-            width: 350px;
-            height: 150px;
-            background-image: url(images/dox.gif);
+            @extend .features-title;
         }
     }
 
@@ -53,3 +57,4 @@ body#features {
         }
     }
 }
+

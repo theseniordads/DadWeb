@@ -1,0 +1,13 @@
+---
+layout: base
+style: knut
+---
+{% include last_updated.html %}
+{% if page.is_index %}
+<div class="index">
+{% include sub_header.html title='d0XX11!!1!' index_url='/features/' force_url=true %}
+</div>
+{% else %}
+{% include sub_header.html title='pR3sS tRa1L!!11!' index_url='/features/presstrail/' %}
+{% endif %}
+{{ content }}

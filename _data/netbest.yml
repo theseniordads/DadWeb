@@ -1,7 +1,7 @@
 - name: hotwired_rgb
   title: Hotwired RGB Gallery
   url: https://web.archive.org/web/20000303053038/http://hotwired.lycos.com/rgb/
-  description: We must be really visonary, because this is a section devoted to people who do the sort of stuff we do in our <a href="../../demos/default.html">demos</a>!!
+  description: We must be really visonary, because this is a section devoted to people who do the sort of stuff we do in our <a href="../../demos/">demos</a>!!
   created_at: 2019-06-18 11:02:21.729703
   updated_at: 2019-06-18 11:02:21.729703
   public: true
