@@ -1,0 +1,44 @@
+body {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; background-color: #FFFFFF; background-image:url(graphics/sd_back.jpg); background-attachment: fixed; ; background-repeat: no-repeat; background-position: left bottom}
+table {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+td {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+
+.title {  font-family: Impact, Arial, Helvetica, sans-serif; font-size:36pt}
+.date {  font-family: Arial, Helvetica, sans-serif; font-size:8pt; color:#FFFFFF; background-color: #000066; font-style: italic}
+.editorial { font-size: 10pt; background-color: #ffddee; border: 1px black solid; padding: 5px; margin-left: 5%;}
+.slogan {  font-family: Times Roman, serif; font-style: italic; font-size: 14pt; background-color: #ffeedd; border: 1px black solid; padding: 5px; margin-left: 5%;}
+.story {  font-size: 10pt; background-color: #ddffee; border: 1px black solid; padding: 5px; margin-left: 5%;}
+.byline {  margin-left: 5%; background-color: #ddeeff; text-align=right; font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: italic}
+.quote {  font-family: Times Roman, serif; font-style: italic; font-size: 10pt; background-color: #ddffff; border: 1px black solid; padding: 5px; margin-left: 5%;}
+.picture {  background-color: #ffffdd; border: 1px black solid; padding: 5px; margin-left: 5%;}
+.picture_frame {  background-color: #ffffdd; border: 1px black solid; padding: 0px; }
+.indent { margin-left: 5%; }.linkoid { font-size: 10pt; background-color: #ffeeee; border: 1px black solid; padding: 5px;}.section_title {  font-family: Arial, Helvetica, sans-serif; font-size:8pt; color:#FFFFFF; background-color: #000000; margin-left: 5%; padding: 0px; font-style: italic}
+.minitext {  font-family: Arial, Helvetica, sans-serif; font-size:8pt; font-weight: bold}
+.tinytext {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt}
+.usenet {  margin-left: 5%; font-family: Courier New, Courier; font-size: 10pt; background-color: #ddeeff; border: 1px black solid; padding: 5px; }
+
+.indent {
+ margin-left: 5%; 
+}
+.linkoid { 
+ font-size: 10pt; 
+ background-color: #ffeeee; 
+ border: 1px black solid; 
+ padding: 5px; 
+ margin-left: 5%; 
+}
+.section_title { 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size:8pt; 
+  color:#FFFFFF; 
+  background-color: #000000; 
+  padding: 0px; 
+  font-style: italic; 
+ }
+
+h2 {  font-family: Arial, Helvetica, sans-serif; font-size:24pt}
+h3 {  font-family: Impact, Arial, Helvetica, sans-serif; font-size:24pt; color:#000055}
+h4 {  font-family: Impact, Arial, Helvetica, sans-serif; font-size: 12pt; color:#000000; margin-left: 5%;; font-weight: lighter}
+h5 {  font-family: Arial, Helvetica, sans-serif; font-size:12pt}
+a:link {  color: #000077}
+a:active {  color: #FFFF99}
+a:visited {  color: #770000}

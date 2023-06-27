@@ -1,0 +1,140 @@
+                   F@£&ing up PC's- a complete how to guide!
+
+                     by Colostomy Bag of the Senior Dads!
+                                   (c) 1995
+
+WARNING -   This article  is  written  for  your  amusement  only!  I  take  NO
+            responsibility for any PC hardware  or  software going haywire as a
+            direct or indirect result of reading this article.
+
+Okay, enough of the boring legal stuff... Let's go!
+
+
+1.  If the person who owns the PC  is  using  a low quality VGA or SVGA monitor
+    and the graphics card being used is capable of an 800 * 600 resolution then
+    try this....  Set the screen driver  to  800  *  600 and then fiddle around
+    with the monitors horizontal position setting until the display goes out of
+    sync.
+
+    The Pc monitor will appear to  work  fine  in dos but when entering windows
+    the display will go to hell (works on my dads PC)
+
+2.  Use the attrib command in MS dos to  show  hidden files on the root of a PC
+    that the operating system needs to read to boot (IO.sys and MSDOS.sys) then
+    copy them to another location  on  the  hardisk, delete the originals, copy
+    them back to the root and make them hidden again.
+
+    The PC will no longer boot!!!
+
+    This is because the files mentioned  HAVE  to  be  the first 2 files in the
+    FAT table on the hardisk for the operating system to boot.
+
+3.  Manually edit the Windows system.ini file so  that there is no mouse driver
+    or change the display driver to something that the monitor can't handle. If
+    the PC owner is running Windows  3.11  then  make  sure that you delete the
+    setup.exe file as well
+
+4.  Delete the doublespace.bin file from the hardisk
+
+5.  Type deltree c:\*.* at the prompt  and  then  press "y" and watch all files
+    and directories on the hardisk dis-appear!
+
+6.  Randomly set and unset jumper switches on the PC  motherboard.
+
+7.  Set all IRQ's for all the devices to the same value (grin!!)
+
+8.  Remove the line "Setblaster" from autoexec.bat  look  this up on Pc as cant
+    remember exact wording of command (bye bye sound on all games!)
+
+9.  Boot from a floppy disk that DOESN'T have doublespace on it, find the drive
+    in which the file for the actual hardisk is and use attrib to write protect
+    it.
+
+10. When the PC is in the process  of  booting, hold down the delete key, enter
+    the BIOS setup, change the values for  the number of sectors,heads etc that
+    the hardisk  has.   You  can  also  usually  disable  all  caching  on  the
+    motherboard which ought to slow  the  machine  down  somewhat (not that the
+    user will be able to notice as  the  machine  will no longer boot but crash
+    displaying a "primary hardisk failure message on screen").
+
+11. Wire  the  turbo  button  up   so   that   it  is  permanently  turned  off
+    (SSSSLLLLOOOOWW!)
+
+12. Open up the machine and alter  the  jumper  swiches on any hardisk swapping
+    primary hardisk and slave settings around.
+
+13. Wire the soundblaster output up to  the  internal  PC speaker and the sound
+    output should drop in quality somewhat!!
+
+14. Use the "grinder" technique
+
+    This one has not been tested yet but ought to work...
+
+    It involves taking a floppy disk apart daubing the black shiny disk with an
+    adhesive substance and then  sprinkle  both  sides  of  the  disk with some
+    abrasive material (sand,metal filings ect).
+
+    Bung the disk back together and ask some  PC owning twat to "Format" it for
+    you.  Then sit back and watch the sparks fly!!!! (literaly!!)
+
+15. Delete the win.com file on windows
+
+16. Change the smart drive configuration settings to really stupid values
+
+
+                   -----------------------------------------
+
+
+As  PC  hardware  changes,  the  various  possibilities  will  continue  to  be
+endless...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
