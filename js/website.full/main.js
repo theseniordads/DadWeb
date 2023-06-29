@@ -6,9 +6,10 @@ $(document).ready( function() {
 	headers();
 	$('a').each( function() {
 		var href = $(this).attr("href");
-		if (href.startsWith("http://") || href.startsWith("https://")) {
-			element.attr("target","_blank");
-		}
+		if (href !== undefined && href !== null) 
+			if (href.startsWith("http://") || href.startsWith("https://")) {
+				$(this).attr("target","_blank");
+			}
 	});
 	//FAQify();
 	

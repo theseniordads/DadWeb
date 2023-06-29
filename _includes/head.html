@@ -7,6 +7,9 @@
   {% else %}
   <meta name="description" content="{{ site.description }}">
   {% endif %}
+  {% if page.author %}
+  <meta name="author" content="{{ page.author }}">
+  {% endif %}
   {% if page.keywords %}
   <meta name="keywords" content="{{ page.keywords }}">
   {% else %}
@@ -24,4 +27,5 @@
   <script language="Javascript" src ="{{ "/js/website/jquery-1.11.0.min.js" | relative_url }}"></script>
   <script language="Javascript" src ="{{ "/js/website.full/jquery.modern-blink.js" | relative_url }}"></script>
   <script language="Javascript" src ="{{ "/js/website.full/main.js" | relative_url }}"></script>
+  <script language="Javascript" src ="{{ "/js/music/midi.min.js" | relative_url }}"></script>
 </head>

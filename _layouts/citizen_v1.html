@@ -2,6 +2,10 @@
 layout: citizen-base
 style: citizen
 ---
+<map name="Citizen">
+  <area shape="RECT" coords="0,0,86,110" href="{{ "/" | relative_url }}" /> 
+  <area shape="RECT" coords="87,0,368,110" href="{{ "/features/citizen/" | relative_url }}" >
+</map> 
 <section id="main-v1">
   <nav>
     <div class="issue">Issue {{ page.issue }} - ({{page.date}})</div>
@@ -11,8 +15,8 @@ style: citizen
       ultra-highway Webby thingy!!!!!</div>
     <div class="email-us">Any interesting stories, feedback, suggestions?? Mail us!! at
       <a href="mailto:senior@forfree.at">senior@forfree.net</a>!!!</div>
-    <div class="written-by">Written by: Old Fart!!! of the SD!!!</div>
-    <div class="contributors">Contributors: Colostomy Bag!! of the SD!!!</div>
+    <div class="written-by">Written by: {{ page.author }}</div>
+    <div class="contributors">Contributors: {% if page.contributors %}{{ page.contributors }}{% else %}Er, none yet!!{% endif %}</div>
     <div class="previous-issues">
       Previous Issues!!<br/>(Go el <a href="archive.html">archive</a>-o!!)
       <ol start="24" reversed="true">
@@ -45,14 +49,27 @@ style: citizen
       Read the <a href="../">current</a> issue...
     </div>
     <div class="music">
-      <!embed src="music/25.mid" vol=200 autostart=true>
-      <bgsound src="music/25.mid">
-      Music by <b>Mozart</b>!!</div>
+      <script type="text/javascript">
+        var music = new MidiPlayer('music/{{ page.issue }}.mid', 'musiplay'); 
+        function play(button) { 
+          if (button.value == 'Play!') {
+            music.play();
+            button.value = 'Stop!';
+          }
+          else {
+            music.stop();
+            button.value = 'Play!';
+          }
+        }
+      </script>
+      Music by <b>Mozart</b>!!
+      <input type="button" onclick="play(this);" value="Play!" id="musiplay" />
+    </div>
   </nav>
   <section>
     <header>
       <p>
-        <img src="../graphics/logo.gif" border="0" width="380" height="110" alt="Senior Citizen!!!" title="Senior Citizen!!!">
+        <img src="../graphics/logo.gif" usemap="#Citizen" border="0" width="380" height="110" alt="Senior Citizen!!!" title="Senior Citizen!!!">
       </p>
       <p>
         <a href="http://seniordads.atari.org/features/citizen/" target="_new">http://seniordads.atari.org/features/citizen/</a>
