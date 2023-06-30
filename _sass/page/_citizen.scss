@@ -368,6 +368,9 @@ body#citizen {
                         float: right;
                         clear: both;
                     }
+                    img:first-child, div:first-child {
+                        margin-right: 1em;
+                    }
                 }
             }
         }
