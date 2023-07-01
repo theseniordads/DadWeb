@@ -367,6 +367,7 @@ body#citizen {
                     img {
                         float: right;
                         clear: both;
+                        border: var(--black) 1px solid;
                     }
                     img:first-child, div:first-child {
                         margin-right: 1em;
