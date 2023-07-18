@@ -60,6 +60,11 @@ collections:
   updates:
     output: true
     permalink: "/updates/:slug.html"
+  scv1_issues:
+    output: false
+    permalink: "/scv1/:slug.html"
+  scv1_articles:
+    output: false
 
 defaults:
   - scope:
