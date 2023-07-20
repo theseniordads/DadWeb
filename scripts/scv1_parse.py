@@ -7,7 +7,7 @@ source_folder = "../features/citizen/v1/"
 issues_output_folder = "../_scv1_issues/"
 articles_output_folder = "../_scv1_articles/"
 
-for issue_number in range(9,26):
+for issue_number in range(8,26):
     issue_path = os.path.join(source_folder, str(issue_number) + ".html")
     raw_html = open(issue_path, "r").read()
     (blank, header, html) = raw_html.split("---\n")
