@@ -5,13 +5,13 @@ from bs4 import BeautifulSoup
 source_folder = "../features/citizen/v1/"
 
 issues_output_folder = "../_scv1_issues/"
-articles_output_folder = "../_scv1_articles/"
+articles_output_folder = "../_sc_articles/v1"
 
 for issue_number in range(8,26):
     issue_path = os.path.join(source_folder, str(issue_number) + ".html")
     raw_html = open(issue_path, "r").read()
     (blank, header, html) = raw_html.split("---\n")
-    issue_page = "---\n" + header + "---\n"
+    issue_page = "---\nversion: 1\n" + header + "---\n"
     output_issue_path = os.path.join(issues_output_folder, str(issue_number) + ".html")
     issue_body = BeautifulSoup(html, "html.parser")
     editorial = issue_body.find("article", class_="editorial")
@@ -25,7 +25,7 @@ for issue_number in range(8,26):
         id_tag = article.find("a")
         article_id = id_tag["name"]
         headline = article.find("h2")
-        article_header = "---\n" + "id: " + article_id + "\n" + "title: \"" + headline.text + "\"\n" + "issue: " + str(issue_number) + "\n---\n"
+        article_header = "---\nversion: 1\n" + "id: " + article_id + "\n" + "title: \"" + headline.text + "\"\n" + "issue: " + str(issue_number) + "\n---\n"
         article_path = os.path.join(articles_output_folder, article_id + ".html")
         article_page = article_header
         for child in article.children:
