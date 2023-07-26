@@ -61,9 +61,9 @@ collections:
     output: true
     permalink: "/updates/:slug.html"
   scv1_issues:
-    output: false
-    permalink: "/scv1/:slug.html"
-  scv1_articles:
+    output: true
+    permalink: "/features/citizen/v1/:slug.html"
+  sc_articles:
     output: false
 
 defaults:
