@@ -5,7 +5,7 @@ author: old_fart
 layout: update_post
 style: updates
 ---
-This website is under (re)construction!!! And it's not finished yet!!!!! So we're started an update section so you can know when certain parts of the site actually bloddy work!!!!!
+This website is under (re)construction!!! And it's not finished yet!!!!! So we're started an update section so you can know when certain parts of the site actually bloddy work!!!!!<!--more-->
 
 ## What we have done
 

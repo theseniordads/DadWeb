@@ -5,7 +5,7 @@ author: old_fart
 layout: update_post
 style: updates
 ---
-Mayday!! Mayday!!!! 
+Mayday!! Mayday!!!!<!--more-->
 
 Yes, it's the first of May, so here are two new updates to the long-term conversion of this site to GitHub Pages!!
 

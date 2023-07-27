@@ -19,13 +19,19 @@ style: citizen
     <div class="contributors">Contributors: {% if page.contributors %}{{ page.contributors }}{% else %}Er, none yet!!{% endif %}</div>
     <div class="previous-issues">
       Previous Issues!!<br/>(Go el <a href="archive.html">archive</a>-o!!)
-      <ol start="25" reversed="true">
-        {% assign issues = site.scv1_issues | sort: "date" | reverse %}
+      {% if page.issue == 0 %}
+      <ol class="zero">Errr, there aren't any!!!<br/>This is the first issue!!!</ol>
+      {% else %}
+      <ol start="{{ page.issue | minus: 1 }}" reversed="true">
+        {% assign issues = site.scv1_issues | sort: "issue" | reverse %}
         {% for issue in issues %}
+        {% if issue.issue < page.issue %}
         <li><a href="{{ issue.issue }}.html">{{ issue.issue-title }}</a>!!!<br/>({{ issue.date | date: "%d/%m/%Y" }})</li>
+        {% endif %}
         {% endfor %}
       </ol>
-      Read the <a href="../">current</a> issue...
+      {% endif %}
+      <a href="index.html">More issues</a>!!!!
     </div>
     {% capture music_url %}/features/citizen/v1/music/{{ page.issue }}.mid{% endcapture %}
     <div class="music">

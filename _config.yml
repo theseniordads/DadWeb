@@ -52,6 +52,8 @@ exclude:
    - runserver_dev.ps1
    - category_generator.py
    - tag_generator.py
+   - README.md
+   - requirements.txt
 
 collections:
   demos:
@@ -88,8 +90,9 @@ defaults:
       path: "updates"
       type: "updates"
     values:
-      layout: "updates"
+      layout: "update"
       style: "updates"
+      excerpt_separator: <!--more-->
 #  - scope:
 #      path: ""          # Set layout for all posts
 #      type: "posts"

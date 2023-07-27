@@ -9,7 +9,10 @@ author: Old Fart!!!
 <section id="v1-articles-index">
   <header>
     <a href="{{ "/features/citizen/" | relative_url }}" class="logo"><img src="{{ "/features/citizen/v2/graphics/logo.jpg" | relative_url }}" width="370" height="111" border="0"></a>
-    <h1>Version 1 Article Archive!!!</h1>
+    <div>
+      <h1>Version 1 Article Archive!!!</h1>
+      <p>You can also browse <a href="index.html">individual issues</a> to!!!!</p>
+    </div>
   </header>
 {% assign articles = site.sc_articles | where: "version", "1" %}
 {% assign article_titles = "" | split: "" %}

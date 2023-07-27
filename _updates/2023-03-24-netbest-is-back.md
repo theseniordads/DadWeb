@@ -5,7 +5,7 @@ author: old_fart
 layout: update_post
 style: updates
 ---
-We've started restoring the [Features](../features/) section, starting with a restoration of [NetBest](../features/netbest/), our celeberation of the best of tha NetWeb!!! 
+We've started restoring the [Features](../features/) section, starting with a restoration of [NetBest](../features/netbest/), our celeberation of the best of tha NetWeb!!!<!--more-->
 
 Unfortunately, it was the best of tha NetWeb when we last updated the page in 1997!!!! So none of the original links work!!!! However, [Wayback Machine](https://web.archive.org) to the rescue!!!! We were surprised to find that nearly all the w3siteys we featured in 1997 were archived and viewable enough, so we rejigged our links to point there!!!!
 
