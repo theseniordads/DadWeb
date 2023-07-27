@@ -10,6 +10,9 @@
 
   --main-text-col: var(--yellow);
   --main-text_shadow-col: var(--black);
+
+  --transistion-speed: 0.15s;
+  --link-transistion: color var(--transistion-speed) ease-in-out, text-decoration var(--transistion-speed) ease-in-out;
 }
 
 @mixin linkCol($link, $visited, $hover, $active) {
@@ -25,6 +28,7 @@
 		}
 		&:hover {
 			color: $hover;
+      transition: var(--link-transistion);
 		}
 	}
 }
