@@ -52,11 +52,11 @@
             <div class="credit">
                 <div class="deed">{{ credit.deed }}{% if credit.deed != "" %}:{% endif %}</div>
                 <div class="detail">
-                    <ul>
+                    {% if page.credits.by_list %}<ul>{% endif %}
                         {% for detail in credit.detail %}
-                        <li>{{ detail }}</li>
+                        {% if page.credits.by_list %}<li>{% endif %}{{ detail }}{% if page.credits.by_list %}</li>{% else %}<br/>{% endif %}
                         {% endfor %}
-                    </ul>
+                    {% if page.credits.by_list %}</ul>{% endif %}
                 </div>
                 <div class="by{% if page.credits.by_list %} list{% endif %}">
                     {% if page.credits.by_list %}<ul>{% endif %}
@@ -66,7 +66,11 @@
                             {% if page.credits.by_list %}<li>{% endif %}
                             {% if being.person %}
                                 {% assign crew_member = site.data.crew[being.person] %}
-                                {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% if being.alias %}
+                                    {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ being.alias }}</a>{% endcapture %}
+                                {% else %}
+                                    {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% endif %}
                                 {% capture crew_name_replace %}%crew_member_name{% if forloop.index > 1 %}{{ forloop.index }}{% endif %}%{% endcapture %}
                                 {% assign credit_text = credit_text | replace : crew_name_replace, crew_member_link %}
                             {% endif %}
@@ -78,7 +82,11 @@
                             {% if page.credits.by_list %}<li>{% endif %}
                             {% if being.person %}
                                 {% assign crew_member = site.data.crew[being.person] %}
-                                {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% if being.alias %}
+                                    {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ being.alias }}</a>{% endcapture %}
+                                {% else %}
+                                    {% capture crew_member_link %}<a href="{{ crew_member.url | relative_url }}">{{ crew_member.name }}</a>{% endcapture %}
+                                {% endif %}
                                 {% if being.person_text %}
                                     {% assign credit_text = being.person_text | replace : "%crew_member_name%", crew_member_link %}
                                 {% else %}
