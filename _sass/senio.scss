@@ -13,6 +13,9 @@
 
   --transistion-speed: 0.15s;
   --link-transistion: color var(--transistion-speed) ease-in-out, text-decoration var(--transistion-speed) ease-in-out;
+
+  --default-font: Times New Roman, Times, Garamond, serif;
+  --default-font-size: 1.05rem;
 }
 
 @mixin linkCol($link, $visited, $hover, $active) {
@@ -43,8 +46,8 @@
 	color: var(--main-text-col);
   text-shadow: 0 0 4px var(--main-text_shadow-col);
 	font: {
-		family : Times New Roman, Times, Garamond, serif;
-		size: 14px;
+		family : var(--default-font);
+		size: var(--default-font-size);
 		weight: normal;
 	}
 	@include linkCol( var(--grass-green), var(--red), var(--white), var(--white) );
@@ -75,7 +78,7 @@ body {
 	.highlight {
 		color: var(--white);
 	}
-	.blink {
+	.blink, blink {
 		animation: blinker 1s step-end infinite;
 		-webkit-animation: blinker 1s step-end infinite;
 	}
@@ -208,7 +211,7 @@ body {
 }
 
 #SDTextTitle {
-	width: 35%;
+	width: 40%;
 }
 
 @import "page/index.scss";

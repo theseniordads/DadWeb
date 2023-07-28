@@ -1,5 +1,5 @@
-{% if preamble %}{{ preamble }}{% endif %}
-<div id="demoStats">
+{% if preamble %}<section id="preamble">{{ preamble }}</section>{% endif %}
+<section id="demoStats">
     <div class="container">
         <div class="stats">
             <div class="header">{{ page.title }}</div>
@@ -36,13 +36,13 @@
         {% capture image_url %}/assets/images/demos/{{ page.screenshots.hero.url }}{% endcapture %}
         <div align="center" class="image" valign="top"><img src="{{ image_url | relative_url }}" title="{{ page.screenshots.hero.title }}" alt="{{ page.screenshots.hero.title }}"></div>
     </div>
-</div>
-<div id="description">
+</section>
+<section id="description">
 {{ description }}
-</div>
+</section>
 
 {% if page.credits %}
-<div id="creditsWrapper">
+<section id="creditsWrapper">
     {% if page.credits.expanded %}
     <div id="creditsExpanded">
         {% if page.credits.header %}
@@ -142,22 +142,25 @@
             {% endfor %}
         </div>
     {% endif %}
-</div>
+    </section>
 {% endif %}
 {% if post_credits %}
-{{ post_credits }}
+<section id="post-credits">
+    {{ post_credits }}
 {% endif %}
 {% if saggie %}
 <p></p>
 <hr>
 <p></p>
-<div id="saggie">
+<section id="saggie">
     <a href="{{ "/features/saggie/" | relative_url }}"><div class="title" title="sAgG13!!!1!" alt="sAgG13!!!1!"></div></a>
     {{ saggie }}
-</div>
+</section>
 {% endif %}
 {% if end_bit %}
+<section id="end-bit">
 {{ end_bit }}
+</section>
 {% endif %}
 {% if page.order < site.demos.size %}
 {% assign next_page_no = page.order | plus: 1 %}
