@@ -28,7 +28,11 @@
                                     {% endif %}
                             {% endfor %}
                     {% endfor %}
-                    </ul>
+                    {% if page.source_code %}
+                    <li><a href="{{ page.source_code }}" target="_blank"><img class="disk" height="37" 
+                        src="{{ "/assets/images/source_code.png" | relative_url }}" title="Source code!!!!" alt="Source code!!!!"/> </a></li>
+                    {% endif %}
+            </ul>
                 </div>
                 {% endif %}
             </div>
