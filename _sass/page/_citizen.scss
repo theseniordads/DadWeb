@@ -412,6 +412,7 @@ body#citizen {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 1em;
             a {
                 position: relative;
                 width: calc(33% - 1em);
@@ -423,7 +424,6 @@ body#citizen {
                             url(images/features/citizen/sc_back.png),
                             linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
                 text-shadow: 0px 0px 5px var(--white);
-                margin-right: 1em;
                 height: 200px;
                 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
                 &.has-cover {
@@ -506,6 +506,8 @@ body#citizen {
             }
         }
         section.letter-articles {
+            --glass-blur: 10px;
+            --glass-opacity: 0.65;
             display: flex;
             justify-content: space-between;
             align-items: stretch;
@@ -514,7 +516,8 @@ body#citizen {
                 font-family: Impact, Arial, Helvetica, sans-serif;
                 font-size:24pt; 
                 color:#000077;
-                background-color: rgba(187,255,255, 0.85);
+                background-color: rgba(187,255,255, var(--glass-opacity));
+                backdrop-filter: blur(var(--glass-blur));
                 border-radius: 0.45em 0 0 0.45em ;
                 width: 3em;
                 text-align: center;
@@ -529,7 +532,8 @@ body#citizen {
             }
             ul {
                 width: calc(100% - 3em);
-                background-color: rgba(255,255,255, 0.75);
+                background-color: rgba(255,255,255, var(--glass-opacity));
+                backdrop-filter: blur(var(--glass-blur));
                 border-radius: 0 0.45em 0.45em 0;
                 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
                 padding: 1em;
