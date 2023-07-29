@@ -7,7 +7,7 @@ style: updates
 ---
 We've now added [DadPlaz!!!!](../demos/dadplazz.html) to the [Demos](../demos/) section!!!!! But that's not all!!!!! What's that new looking *"GIT!"* link next to the FTP mirrors!??!?!?
 
-Nope!!!!! It's not a hotline to [Doddering Git](/crew/#Doddering_Git)!!!!!!!! It's the [source code on GitHub](https://github.com/theseniordads/dadplazz)!!!!!!
+Nope!!!!! It's not a hotline to [Doddering Git](../crew/#Doddering_Git)!!!!!!!! It's the [source code on GitHub](https://github.com/theseniordads/dadplazz)!!!!!!
 
 Ever since we started to restore the old website, we've been finding some of our old source code for our Atari demoes and thot: *"Hay!!!! Wouldn't it be groovy if we clean up this source code for modern users, and put it up on GitHub, so that our works are exposed for all posterity!??!?!! Yes, hay, let's do that!!!"*
 
