@@ -10,9 +10,7 @@
             <div class="released">Released: {{ page.released }}!!!!</div>
             <div class="downloads">
                 {% capture local_file %}/filez/demos/{{ page.local_file}}{% endcapture %}
-                <div class="mainfile"><a href="{{ local_file | relative_url }}"><img alt="[d0Wnl0Ad!!11]" title="[d0Wnl0Ad!!11]" class="disk"
-                            height="37" src="{{ "/assets/images/disk1.gif" | relative_url }}" title="[d0Wnl0Ad!!11]" width="34"></a><a
-                        href="{{ local_file | relative_url }}">Shift Clicky 2 Downloady! ({{page.size}})</a></div>
+                <div class="mainfile"><a href="{{ local_file | relative_url }}">{% if page.id == "/demos/monomental" %}<img alt="[d0Wnl0Ad!!11]" title="[d0Wnl0Ad!!11]" class="disk" height="37" src="{{ "/assets/images/demos/mono/disk.gif" | relative_url }}" title="[d0Wnl0Ad!!11]" width="34">{% else %}<img alt="[d0Wnl0Ad!!11]" title="[d0Wnl0Ad!!11]" class="disk" height="37" src="{{ "/assets/images/disk1.gif" | relative_url }}" title="[d0Wnl0Ad!!11]" width="34">{% endif %}</a><a href="{{ local_file | relative_url }}">Shift Clicky 2 Downloady! ({{page.size}})</a></div>
                 {% if page.ftp_mirrors %}
             <div class="mirrors">Also mirrored at<ul>
                     {% for mirror in page.ftp_mirrors %}
@@ -21,7 +19,11 @@
                             {% for mirror_title in site.data.mirror_titles %}
                                 {% if mirror_title.id == mirror_index %}
                                     {% assign mirror_title = mirror_title %}
+                                    {% if page.id == "/demos/monomental" %}
+                                    {% capture image_url %}/assets/images/demos/mono/disk.gif{% endcapture %}
+                                    {% else %}
                                     {% capture image_url %}/assets/images/{{ mirror_title.image }}{% endcapture %}
+                                    {% endif %}
                                     <a href="{{ mirror }}"><img class="disk" height="37" 
                                         src="{{image_url | relative_url }}" title="{{ mirror_title.title }}" alt="{{ mirror_title.title }}"
                                         width="34"></a></li>
