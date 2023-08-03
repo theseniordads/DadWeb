@@ -11,7 +11,7 @@
             <div class="downloads">
                 {% capture local_file %}/filez/demos/{{ page.local_file}}{% endcapture %}
                 <div class="mainfile"><a href="{{ local_file | relative_url }}">{% if page.id == "/demos/monomental" %}<img alt="[d0Wnl0Ad!!11]" title="[d0Wnl0Ad!!11]" class="disk" height="37" src="{{ "/assets/images/demos/mono/disk.gif" | relative_url }}" title="[d0Wnl0Ad!!11]" width="34">{% else %}<img alt="[d0Wnl0Ad!!11]" title="[d0Wnl0Ad!!11]" class="disk" height="37" src="{{ "/assets/images/disk1.gif" | relative_url }}" title="[d0Wnl0Ad!!11]" width="34">{% endif %}</a><a href="{{ local_file | relative_url }}">Shift Clicky 2 Downloady! ({{page.size}})</a></div>
-                {% if page.ftp_mirrors %}
+                {% if page.ftp_mirrors or page.source_code %}
             <div class="mirrors">Also mirrored at<ul>
                     {% for mirror in page.ftp_mirrors %}
                         <li>
