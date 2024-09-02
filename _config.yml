@@ -18,7 +18,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   We are the flipping megamighty best demo crew in the entire world, and you are jolly well going to visit our brilliant demo pages! You have no choice, because wherever you go on the web for demo crews, all links lead back here!! So why not go here first? You WILL, if you know what's good for you....
 author: Old Fart!!!
 baseurl: ""                             # the subpath of your site, e.g. /blog
-url: "https://theseniordadss.github.io/" # the base hostname & protocol for your site, e.g. http://example.coms
+url: "https://theseniordads.github.io/" # the base hostname & protocol for your site, e.g. http://example.coms
 show_excerpts: True
 
 # Build settings
