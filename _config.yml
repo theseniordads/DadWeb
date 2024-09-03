@@ -26,7 +26,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-minifier
   
 paginate: 10
 
@@ -53,13 +52,7 @@ exclude:
    - README.md
    - requirements.txt
    - assets/js/music/midi.js
-
-# jekyll-minifier options
-jekyll-minifier:
-  exclude: 
-     - 'atom.xml'
-     - 'fslightbox.js'
-     - 'midi.min.js'
+   - assets/js/main.js
 
 collections:
   demos:
