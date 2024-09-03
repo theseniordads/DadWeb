@@ -1,92 +1,114 @@
 /* s3N10r sZcR1pTzC!!!!!1!1!!*/
-$(document).ready( function() {
+
+function fadeIn(element, callback) {
+	element.classList.add('fade-in');
+	element.addEventListener('animationend', function() {
+		element.classList.remove('fade-in');
+		if (callback) callback();
+	});
+}
+
+function fadeOut(element, callback) {
+	element.classList.add('fade-out');
+	element.addEventListener('animationend', function() {
+		if (callback) callback();
+		element.classList.remove('fade-out');
+	});
+}
+
+document.addEventListener('DOMContentLoaded', function() {
 	var htmlWordMatch = /(<\/?\w+(?:(?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)\/?>)/gim;
+
+	homeMenu();
 	visitorCounter();
+	lastUpdated();
 	leetSpeak();
-	headers();
-	$('a').each( function() {
-		var href = $(this).attr("href");
-		if (href !== undefined && href !== null) 
-			if (href.startsWith("http://") || href.startsWith("https://")) {
-				$(this).attr("target","_blank");
+	outsideLinks();
+	FAQify();
+
+	// Home menu
+	function homeMenu() {
+		var menu_icons = document.querySelectorAll('#homeMenu .menuItem .icon');
+		var length = menu_icons.length;
+		for (var i = 0; i < length; i++) {
+			var icon = menu_icons[i];
+			var link = icon.parentElement.querySelector('.text > a');
+			if (link != "") {
+				icon.style.cursor = 'pointer';
+				icon.dataset.href = link.href;
+				if ((link.target != null) && (link.target != ""))
+					icon.dataset.target = link.target;
+				icon.addEventListener('click', function() {
+					if (this.dataset.target != null)
+						window.open(this.dataset.href, this.dataset.target);
+					else
+						window.location = this.dataset.href;
+				});
 			}
-	});
-	//FAQify();
-	
-	// Old school blinking!
-	/*$('.blink').each( function () {
-		blinker($(this));
-	});*/
-	/*$('.blink').animate({
-	    opacity: 0.5
-	  }, 500);*/
-	// Set last updated for page.
-	//$('.lastUpdated').append('Last updated: ' + document.lastModified);
-	// Set last updated for URL.
-	$('.urlLastUpdated').each( function() {
-		var element = $(this);
-		getlastmod(element.attr("rel"), appendLastModeDate, element);
-	});
-	
-	function appendLastModeDate(element, date) {
-		element.append('Last updated: ' + date);
+			else
+				icon.style.cursor = 'default';
+		}
 	}
-	
-	function getlastmod(url, cb, element) {
-	    var req = new XMLHttpRequest();
-	    req.open("GET", url);
-	    req.addEventListener("load", function() {
-	        cb(element, req.getResponseHeader("Last-Modified"));
-	    }, false);
-	    req.send(null);
-	}
-	
+		
 	// Random visitor counter
 	function visitorCounter() 
-	{		
-		$('.counter').each( function() {
-			var element = $(this);
-			var digits = element.attr("rel");
+	{
+		var counters = document.getElementsByClassName('counter');
+		var length = counters.length;
+		for (var i = 0; i < length; i++) {
+			var element = counters[i];
+			var digits = element.getAttribute('rel');
 			var counter = "";
 			for (var i=0; i<=digits; i++) 
 				counter += Math.floor(Math.random()*8) + 1 + "";
-			element.append(counter);
-		});
+			element.innerHTML = counter;
+		}
+	}
+
+	// Set last updated for URL.
+	function lastUpdated() {
+		var last_updates = document.getElementsByClassName('urlLastUpdated');
+		var length = last_updates.length;
+		for (var i = 0; i < length; i++) {
+			var element = last_updates[i];
+			getlastmod(element.getAttribute('rel'), appendLastModeDate, element);
+		}
+			
+		function getlastmod(url, cb, element) {
+			var req = new XMLHttpRequest();
+			req.open("GET", url);
+			req.addEventListener("load", function() {
+				cb(element, req.getResponseHeader("Last-Modified"));
+			}, false);
+			req.send(null);
+		}
+
+		function appendLastModeDate(element, date) {
+			element.append('Last updated: ' + date);
+		}
 	}
 	
-	// Header links
-	$('.link').click(function(){ window.location = $(this).attr('rel'); });
-
-    // "Saggie" in demo pages
- /*   $('#saggie .title').each(function() {
-        $(this).attr('title','sAgG13!!!1!');
-        $(this).click(function(){ window.location = '/default.html'; });
-    });*/
-
-    // "More" links
-	/*
-    $('.more').each(function() {
-        $(this).attr('title','[ m0R3!!!11!1 ]');
-        $('.link').click(function(){ window.location = $(this).attr('rel'); });
-    });*/
-
     // Doddering Git's "l33TsP33k" styling
-	function leetSpeak() {
-		$('.l33TsP33k').each( function() {						// Only execute on "l33TsP33k" areas of the page
+	function leetSpeak( leetFirstStyle ) {
+		if (leetFirstStyle == undefined) leetFirstStyle = 'l33Tf1RsT';
+		var leetspeek_areas = document.getElementsByClassName('l33TsP33k');	// Only execute on "l33TsP33k" areas of the page
+		var length = leetspeek_areas.length;
+		for (var i = 0; i < length; i++) {
+			var element = leetspeek_areas[i];
 			var output = "";
-			var tokens = $(this).html().split(htmlWordMatch);	// Split by whitespace into tags and content
+			var tokens = element.innerHTML.split(htmlWordMatch);	// Split by whitespace into tags and content
 			var tokenLength = tokens.length;					// Get number of tags and content
-			for(var i=0; i<tokenLength; i++) {					// For each tag/content...
-				var token = tokens[i].trim();					// Trim any whitespace
+			for(var j=0; j<tokenLength; j++) {					// For each tag/content...
+				var token = tokens[j].trim();					// Trim any whitespace
 				if (token != "") {								// If there's anything left...
 					if (token.substring(0,1) !="<") {			// Make sure we're not inside an HTML tag!!
 						var words = token.split(/\s+/);			// Split by whitespace into words
 						var length = words.length;				// Get number of words
-						for (var j=0; j < length; j++) {		// For each word...
-							var word = words[j].trim();			// Trim any whitespace
+						for (var k=0; k < length; k++) {		// For each word...
+							var word = words[k].trim();			// Trim any whitespace
 							if (word != "")						// If there anything left...
 								// Apply style to first letter of word, and add trailing space
-								output += "<span class=\"l33Tf1RsT\">" + word.substring(0,1) + "</span>" + word.substring(1,word.length) + " ";
+								output += "<span class=\"" + leetFirstStyle + "\">" + word.substring(0,1) + "</span>" + word.substring(1,word.length) + " ";
 						}
 					}
 					else {
@@ -96,71 +118,30 @@ $(document).ready( function() {
 				}
 			};
 			// Finally, replace area with altered output.
-			$(this).html(output);
-		});
+			element.innerHTML = output;
+		}
 	}
 
-
-    // Doddering Git's "l33TsP33k" styling- extra strength!!
-    function leetSpeakExtra() {
-        $('.l33TsP33k3xTrA').each( function() {				    // Only execute on "l33TsP33k3xTrA" areas of the page
-            var output = "";
-            var tokens = $(this).html().split(htmlWordMatch);	// Split by whitespace into tags and content
-            var tokenLength = tokens.length;					// Get number of tags and content
-            for(var i=0; i<tokenLength; i++) {					// For each tag/content...
-                var token = tokens[i].trim();					// Trim any whitespace
-                if (token != "") {								// If there's anything left...
-                    if (token.substring(0,1) !="<") {			// Make sure we're not inside an HTML tag!!
-                        var words = token.split(/\s+/);			// Split by whitespace into words
-                        var length = words.length;				// Get number of words
-                        for (var j=0; j < length; j++) {		// For each word...
-                            var word = words[j].trim();			// Trim any whitespace
-                            if (word != "")						// If there anything left...
-                            // Alternate for each character
-                            var apply = false;
-                            var charLength = word.length;
-                            for (var k=0; k < charLength; k++)
-                            {
-                                if (apply)
-                                    output += "<span class=\"l33Tf1RsT\">" + word.substring(k,1) + "</span>";
-                                else
-                                    output += word.substring(k,1);
-                                apply = !apply;
-                            }
-                        }
-                    }
-                    else {
-                        // If we're in an HTML tag, just add it unaltered to the output.
-                        output += token;
-                    }
-                }
-            };
-            // Finally, replace area with altered output.
-            $(this).html(output);
-        });
-    }
-
-	// Header logo links
-	function headers() {
-		$('#homeMenu .menuItem .icon').each( function() {
-			var link = $(this).parent().find('.text a')[0];
-			if (link != "" ) {
-				if ((link.target != null)&&(link.target != "")) 
-					$(this).click(function() { window.open(link.href, link.target); });
-				else
-					$(this).click(function() { window.location = link.href; });
-			}
-			else 
-				$(this).css('cursor', 'default');
-		});
+	// Outside links open in new window
+	function outsideLinks() {
+		var links = document.getElementsByTagName('a');
+		var length = links.length;
+		for (var i = 0; i < length; i++) {
+			var link = links[i];
+			var href = link.getAttribute('href');
+			if (href !== undefined && href !== null) 
+				if (href.startsWith("http://") || href.startsWith("https://")) {
+					link.setAttribute('target', '_blank');
+				}
+		}
 	}
-
 	
 	// FAQ styling
 	function FAQify() {
-		$('#SDFaq').each( function() {							// Only execute on "SDFaq" area of the page
+		var sd_faqs = document.getElementById('SDFaq');
+		if (sd_faqs != null) {
 			var output = "";
-			var tokens = $(this).html().split(htmlWordMatch);	// Split by whitespace into tags and content
+			var tokens = sd_faqs.innerHTML.split(htmlWordMatch);	// Split by whitespace into tags and content
 			var tokenLength = tokens.length;					// Get number of tags and content
 			for(var i=0; i<tokenLength; i++) {					// For each tag/content...
 				var token = tokens[i].trim();					// Trim any whitespace
@@ -177,16 +158,7 @@ $(document).ready( function() {
 				}
 			};
 			// Finally, replace area with altered output.
-			$(this).html(output);
-		});
-	}
-	
-	function blinker( element ) {
-		function blink_element() {
-		    $('.blink').fadeOut('fast', function() {
-		    	$('.blink').fadeIn('fast');
-		    });
+			sd_faqs.innerHTML = output;
 		}
-		setInterval(blink_element, 1000);
 	}
 });
