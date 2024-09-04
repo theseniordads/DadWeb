@@ -53,6 +53,7 @@ body#crew {
 
     .faq {
       @extend .highlight;
+      text-transform: uppercase;
     }
 
     #main {

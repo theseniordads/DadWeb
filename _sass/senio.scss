@@ -81,9 +81,20 @@
   font-family: Courier, san-serif;
 }
 
-// Blink keyframes
-@-webkit-keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
-@keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+// CSS Blink
+@keyframes blinker {
+  20%, 90% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.blink, blink {
+  animation: blinker 1.5s linear infinite;
+  -webkit-animation: blinker 1.5s linear infinite;
+}
+
 
 body {
   padding: 1%;
@@ -96,10 +107,6 @@ body {
 	}
 	.highlight {
 		color: var(--white);
-	}
-	.blink, blink {
-		animation: blinker 1s step-end infinite;
-		-webkit-animation: blinker 1s step-end infinite;
 	}
 	.formattedtext {
 		@extend .highlight;
